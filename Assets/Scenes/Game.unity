@@ -220,6 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &2575882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -667,6 +669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &198727571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -723,6 +727,8 @@ GameObject:
   m_Component:
   - component: {fileID: 237948486}
   - component: {fileID: 237948487}
+  - component: {fileID: 237948489}
+  - component: {fileID: 237948488}
   m_Layer: 0
   m_Name: wp_5
   m_TagString: Untagged
@@ -800,6 +806,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &237948488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237948485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &237948489
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237948485}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.61, y: 2.07}
+    newSize: {x: 1.61, y: 2.07}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.61, y: 2.07}
+  m_EdgeRadius: 0
 --- !u!1 &314412509
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +963,8 @@ GameObject:
   m_Component:
   - component: {fileID: 388375860}
   - component: {fileID: 388375861}
+  - component: {fileID: 388375863}
+  - component: {fileID: 388375862}
   m_Layer: 0
   m_Name: wp_8
   m_TagString: Untagged
@@ -974,6 +1042,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &388375862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388375859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &388375863
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388375859}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.61, y: 2.07}
+    newSize: {x: 1.61, y: 2.07}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.61, y: 2.07}
+  m_EdgeRadius: 0
 --- !u!1 &429078257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &440420467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1355,6 +1485,8 @@ GameObject:
   m_Component:
   - component: {fileID: 560066571}
   - component: {fileID: 560066572}
+  - component: {fileID: 560066574}
+  - component: {fileID: 560066573}
   m_Layer: 0
   m_Name: wb_2
   m_TagString: Untagged
@@ -1432,6 +1564,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &560066573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560066570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &560066574
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560066570}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.79, y: 2.49}
+    newSize: {x: 1.79, y: 2.49}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.79, y: 2.49}
+  m_EdgeRadius: 0
 --- !u!1 &596711465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,6 +1634,8 @@ GameObject:
   m_Component:
   - component: {fileID: 596711466}
   - component: {fileID: 596711467}
+  - component: {fileID: 596711469}
+  - component: {fileID: 596711468}
   m_Layer: 0
   m_Name: wp_1
   m_TagString: Untagged
@@ -1519,6 +1713,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &596711468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596711465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &596711469
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596711465}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.61, y: 2.07}
+    newSize: {x: 1.61, y: 2.07}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.61, y: 2.07}
+  m_EdgeRadius: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,6 +1867,8 @@ GameObject:
   m_Component:
   - component: {fileID: 679963919}
   - component: {fileID: 679963920}
+  - component: {fileID: 679963922}
+  - component: {fileID: 679963921}
   m_Layer: 0
   m_Name: wp_4
   m_TagString: Untagged
@@ -1690,6 +1946,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &679963921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679963918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &679963922
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679963918}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.61, y: 2.07}
+    newSize: {x: 1.61, y: 2.07}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.61, y: 2.07}
+  m_EdgeRadius: 0
 --- !u!1 &708460736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,6 +2107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &708460740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1894,6 +2212,8 @@ GameObject:
   m_Component:
   - component: {fileID: 844251542}
   - component: {fileID: 844251543}
+  - component: {fileID: 844251545}
+  - component: {fileID: 844251544}
   m_Layer: 0
   m_Name: wk_0
   m_TagString: Untagged
@@ -1971,6 +2291,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &844251544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844251541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &844251545
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844251541}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.36, y: 2.51}
+    newSize: {x: 2.36, y: 2.51}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.36, y: 2.51}
+  m_EdgeRadius: 0
 --- !u!1 &864459908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,6 +2361,8 @@ GameObject:
   m_Component:
   - component: {fileID: 864459909}
   - component: {fileID: 864459910}
+  - component: {fileID: 864459912}
+  - component: {fileID: 864459911}
   m_Layer: 0
   m_Name: wq_0
   m_TagString: Untagged
@@ -2058,6 +2440,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &864459911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864459908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &864459912
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864459908}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.4, y: 2.42}
+    newSize: {x: 2.4, y: 2.42}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.4, y: 2.42}
+  m_EdgeRadius: 0
 --- !u!1 &920976829
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,6 +2601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &920976833
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2393,6 +2837,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &956814735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2840,6 +3286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1001411900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2896,6 +3344,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1123933510}
   - component: {fileID: 1123933511}
+  - component: {fileID: 1123933513}
+  - component: {fileID: 1123933512}
   m_Layer: 0
   m_Name: wr_2
   m_TagString: Untagged
@@ -2973,6 +3423,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1123933512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123933509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &1123933513
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123933509}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.78, y: 2.25}
+    newSize: {x: 1.78, y: 2.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.78, y: 2.25}
+  m_EdgeRadius: 0
 --- !u!1 &1138538555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2983,6 +3493,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1138538556}
   - component: {fileID: 1138538557}
+  - component: {fileID: 1138538559}
+  - component: {fileID: 1138538558}
   m_Layer: 0
   m_Name: wp_6
   m_TagString: Untagged
@@ -3060,6 +3572,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1138538558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138538555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &1138538559
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138538555}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.61, y: 2.07}
+    newSize: {x: 1.61, y: 2.07}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.61, y: 2.07}
+  m_EdgeRadius: 0
 --- !u!1 &1177645524
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,6 +3642,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1177645525}
   - component: {fileID: 1177645526}
+  - component: {fileID: 1177645528}
+  - component: {fileID: 1177645527}
   m_Layer: 0
   m_Name: wr_1
   m_TagString: Untagged
@@ -3147,6 +3721,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1177645527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177645524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &1177645528
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177645524}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.78, y: 2.25}
+    newSize: {x: 1.78, y: 2.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.78, y: 2.25}
+  m_EdgeRadius: 0
 --- !u!1 &1179289585
 GameObject:
   m_ObjectHideFlags: 0
@@ -3335,6 +3969,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1237399176
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3482,6 +4118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1265444202
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3538,6 +4176,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1269431331}
   - component: {fileID: 1269431332}
+  - component: {fileID: 1269431334}
+  - component: {fileID: 1269431333}
   m_Layer: 0
   m_Name: wb_1
   m_TagString: Untagged
@@ -3615,6 +4255,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1269431333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269431330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &1269431334
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269431330}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.79, y: 2.49}
+    newSize: {x: 1.79, y: 2.49}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.79, y: 2.49}
+  m_EdgeRadius: 0
 --- !u!1 &1295839595
 GameObject:
   m_ObjectHideFlags: 0
@@ -3716,6 +4416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1295839599
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3950,6 +4652,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1310755069
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4097,6 +4801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1349346783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4240,6 +4946,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1530243565}
   - component: {fileID: 1530243566}
+  - component: {fileID: 1530243568}
+  - component: {fileID: 1530243567}
   m_Layer: 0
   m_Name: wp_2
   m_TagString: Untagged
@@ -4317,6 +5025,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1530243567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530243564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &1530243568
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530243564}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.61, y: 2.07}
+    newSize: {x: 1.61, y: 2.07}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.61, y: 2.07}
+  m_EdgeRadius: 0
 --- !u!1 &1715992757
 GameObject:
   m_ObjectHideFlags: 0
@@ -4418,6 +5186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1715992761
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4561,6 +5331,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1809273388}
   - component: {fileID: 1809273389}
+  - component: {fileID: 1809273391}
+  - component: {fileID: 1809273390}
   m_Layer: 0
   m_Name: wn_2
   m_TagString: Untagged
@@ -4638,6 +5410,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1809273390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809273387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &1809273391
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809273387}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.05, y: 2.43}
+    newSize: {x: 2.05, y: 2.43}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.05, y: 2.43}
+  m_EdgeRadius: 0
 --- !u!1 &1815253353
 GameObject:
   m_ObjectHideFlags: 0
@@ -4648,6 +5480,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1815253354}
   - component: {fileID: 1815253355}
+  - component: {fileID: 1815253357}
+  - component: {fileID: 1815253356}
   m_Layer: 0
   m_Name: wn_1
   m_TagString: Untagged
@@ -4725,6 +5559,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1815253356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815253353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &1815253357
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815253353}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.05, y: 2.43}
+    newSize: {x: 2.05, y: 2.43}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.05, y: 2.43}
+  m_EdgeRadius: 0
 --- !u!1 &1830153939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4909,6 +5803,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1869043560}
   - component: {fileID: 1869043561}
+  - component: {fileID: 1869043563}
+  - component: {fileID: 1869043562}
   m_Layer: 0
   m_Name: wp_7
   m_TagString: Untagged
@@ -4986,6 +5882,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1869043562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869043559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &1869043563
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869043559}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.61, y: 2.07}
+    newSize: {x: 1.61, y: 2.07}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.61, y: 2.07}
+  m_EdgeRadius: 0
 --- !u!1 &1880478317
 GameObject:
   m_ObjectHideFlags: 0
@@ -5087,6 +6043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1880478322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5281,6 +6239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1944164198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5428,6 +6388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1959640860
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5571,6 +6533,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2098125591}
   - component: {fileID: 2098125592}
+  - component: {fileID: 2098125594}
+  - component: {fileID: 2098125593}
   m_Layer: 0
   m_Name: wp_3
   m_TagString: Untagged
@@ -5648,6 +6612,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2098125593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098125590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: 1.099949
+  chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
+--- !u!61 &2098125594
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098125590}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.61, y: 2.07}
+    newSize: {x: 1.61, y: 2.07}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.61, y: 2.07}
+  m_EdgeRadius: 0
 --- !u!1 &2136550108
 GameObject:
   m_ObjectHideFlags: 0
