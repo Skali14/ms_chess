@@ -7,7 +7,7 @@ public class Rook : Piece
     {
     }
 
-    public override bool IsValidMove(int startRow, int startCol, int destRow, int destCol, Piece[,] squares)
+    public override bool IsValidMove(int startRow, int startCol, int destRow, int destCol, Piece[,] squares, Game game)
     {
         // Ensure move is either horizontal or vertical and startPos is different from destPos
         if (startRow != destRow && startCol != destCol || startRow == destRow && startCol == destCol)
