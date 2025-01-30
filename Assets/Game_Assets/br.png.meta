@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fa4e8c2d1ad6b014d84ab1ac566f2ba6
+guid: 9e227a4a76f538041b2cb45c445fefc2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2628853326628446179
-    second: black_queen_0
+      213: -6442041118641851461
+    second: br_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: black_queen_0
+      name: br_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 18
+        x: 61
+        y: 27
+        width: 178
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1025b3e3df648bd0800000000000000
-      internalID: -2628853326628446179
+      spriteID: bb374e6ebb54996a0800000000000000
+      internalID: -6442041118641851461
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      black_queen_0: -2628853326628446179
+      br_0: -6442041118641851461
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
