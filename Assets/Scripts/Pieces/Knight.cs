@@ -7,7 +7,7 @@ public class Knight : Piece
     {
     }
 
-    public override bool IsValidMove(int startRow, int startCol, int destRow, int destCol, Piece[,] squares)
+    public override bool IsValidMove(int startRow, int startCol, int destRow, int destCol, Piece[,] squares, Game game)
     {
         if (startRow == destRow && startCol == destCol) return false;
 

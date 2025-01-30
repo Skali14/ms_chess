@@ -9,5 +9,5 @@ public abstract class Piece
         IsWhite = isWhite;
     }
 
-    public abstract bool IsValidMove(int startRow, int startCol, int destRow, int destCol, Piece[,] squares);
+    public abstract bool IsValidMove(int startRow, int startCol, int destRow, int destCol, Piece[,] squares, Game game);
 }

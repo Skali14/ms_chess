@@ -6,7 +6,7 @@ public class King : Piece
     {
     }
 
-    public override bool IsValidMove(int startRow, int startCol, int destRow, int destCol, Piece[,] squares)
+    public override bool IsValidMove(int startRow, int startCol, int destRow, int destCol, Piece[,] squares, Game game)
     {
         throw new System.NotImplementedException();
     }
