@@ -16,7 +16,7 @@ public class Game
         Piece piece = board.getSquare(startRow, startCol);
         if (piece != null && piece.IsValidMove(startRow, startCol, destRow, destCol, board.Squares))
         {
-            
+            return false;
         }
         else
         {
@@ -26,12 +26,12 @@ public class Game
 
     private bool isCheckMate()
     {
-
+        return false;
     }
 
     private bool isStaleMate()
     {
-
+        return false;
     }
 
 
