@@ -22,30 +22,19 @@ public class Rook : Piece
         }
 
         // Determine direction and check for obstructions
-        if (startRow == destRow) // Horizontal move
+        int rowDirection = startRow == destRow ? 0 : (destRow > startRow ? 1 : -1);
+        int colDirection = startCol == destCol ? 0 : (destCol > startCol ? 1 : -1);
+
+        int row = startRow + rowDirection;
+        int col = startCol + colDirection;
+
+        while (row != destRow || col != destCol)
         {
-            int minCol = Math.Min(startCol, destCol) + 1;
-            int maxCol = Math.Max(startCol, destCol);
-            for (int col = minCol; col < maxCol; col++)
-            {
-                if (squares[startRow, col] != null)
-                {
-                    return false;
-                }
-            }
+            if (squares[row, col] != null) return false; // Blocked path
+            row += rowDirection;
+            col += colDirection;
         }
-        else // Vertical move
-        {
-            int minRow = Math.Min(startRow, destRow) + 1;
-            int maxRow = Math.Max(startRow, destRow);
-            for (int row = minRow; row < maxRow; row++)
-            {
-                if (squares[row, startCol] != null)
-                {
-                    return false;
-                }
-            }
-        }
+
         return true;
     }
 }
