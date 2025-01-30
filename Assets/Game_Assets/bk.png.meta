@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f84330cd94e14ca4c921be91b91edbb6
+guid: b438a60ec67fdb643804bcae8b353511
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -334450713805299198
-    second: black_knight_0
+      213: 7186656541719271990
+    second: bk_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: black_knight_0
+      name: bk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 18
+        x: 33
+        y: 27
+        width: 236
+        height: 251
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 20262c809dacb5bf0800000000000000
-      internalID: -334450713805299198
+      spriteID: 63a1ae35c022cb360800000000000000
+      internalID: 7186656541719271990
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      black_knight_0: -334450713805299198
+      bk_0: 7186656541719271990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
