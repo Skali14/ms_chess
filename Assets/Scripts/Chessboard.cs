@@ -12,8 +12,9 @@ public class Chessboard
 
     private void intializeBoard()
     {
+        Debug.Log("Square length: " + Squares.Length);
         // initialize Pawns
-        for (int i = 0; i < Squares.Length; i++)
+        for (int i = 0; i < Squares.Length - 1; i++)
         {
             Squares[1, i] = new Pawn(false);
             Squares[6, i] = new Pawn(true);
