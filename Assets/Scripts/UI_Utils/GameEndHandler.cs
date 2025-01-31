@@ -2,33 +2,35 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameEnd : MonoBehaviour
+public class GameEndHandler : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     //CHECKMATE = 0, RESIGNATION = 1, DRAW = 2
-    public int result = 0;
 
-    //BLACK = 0, WHITE = 1
-    public int winner = 0;
+    //BLACK = 0, WHITE = 1, NONE = 2
 
     //self explanatory
-    public int score = 0;
+    UIManager uiManager;
     void Start()
     {
-        setVariables(result, winner, score);
+        uiManager = UIManager.instance;
+        setVariables(GameHandler.result, GameHandler.winner, 100);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void doPlayAgain()
     {
-        
+        uiManager.TransitionToGameScene();
+    }
+
+    public void doMainMenu()
+    {
+        uiManager.TransitionToStartScene();
     }
 
     private void setVariables(int result, int winner, int score)
     {
         TMP_Text TMP_Result = GameObject.Find("Result_Text").GetComponent<TMP_Text>();
         TMP_Text TMP_ColorWon = GameObject.Find("ColorWon_Text").GetComponent<TMP_Text>();
-        TMP_Text TMP_Score = GameObject.Find("Score_Text").GetComponent<TMP_Text>();
         Image Black_Image = GameObject.Find("Black_Image").GetComponent<Image>();
         Image White_Image = GameObject.Find("White_Image").GetComponent<Image>();
 
@@ -58,8 +60,6 @@ public class GameEnd : MonoBehaviour
                 White_Image.enabled = true;
                 break;
         }
-
-        TMP_Score.text = $"Score: {score}";
     }
 
 }
