@@ -4,7 +4,7 @@ using System;
 public class Chessboard
 {
 
-    public Piece[,] Squares { get; private set; } // 8 * 8 matrix to store pieces
+    public Piece[,] Squares { get; } // 8 * 8 matrix to store pieces
 
     public Chessboard() {
         Squares = new Piece[8, 8];
