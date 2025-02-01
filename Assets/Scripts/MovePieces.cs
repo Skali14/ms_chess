@@ -13,7 +13,8 @@ public class movePieces : MonoBehaviour
 
     private void Update()
     {
-        if(dragging)
+        //TODO
+        if(dragging /*&& !Game.gameEnd*/)
         {
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
         }
@@ -21,15 +22,24 @@ public class movePieces : MonoBehaviour
 
     public void OnMouseDown()
     {
-
-        offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        dragging = true;
+        //TODO
+        if(/*!Game.gameEnd*/true)
+        {
+            offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            dragging = true;
+        }
+        
     }
 
     public void OnMouseUp()
     {
-        dragging= false;
-        SnapToNearestCenter();
+        //TODO
+        if(/*!Game.gameEnd*/true)
+        {
+            dragging = false;
+            SnapToNearestCenter();
+        }
+        
     }
 
     private void SnapToNearestCenter()
