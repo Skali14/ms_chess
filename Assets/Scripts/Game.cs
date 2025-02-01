@@ -5,6 +5,8 @@ public class Game
     public Chessboard board { get; private set; }
     public bool IsWhiteTurn { get; private set; }
 
+    public bool isStaleMate { get; private set; }
+
     public (int StartRow, int StartCol, int DestRow, int DestCol, Piece MovedPiece)? LastMove { get; private set; }
 
     public Game()
@@ -15,6 +17,7 @@ public class Game
 
     public bool makeMove(int startRow, char startCol, int destRow, char destCol)
     {
+        //TODO
         Piece piece = board.getSquare(startRow, startCol);
         if (piece != null && piece.IsValidMove(startRow, startCol, destRow, destCol, board.Squares, this))
         {
@@ -29,6 +32,7 @@ public class Game
 
     private bool isCheckMate()
     {
+        //TODO
         return false;
     }
 
@@ -71,5 +75,6 @@ public class Game
     private bool isStaleMate()
     {
         return false;
+        //TODO
     }
 }
