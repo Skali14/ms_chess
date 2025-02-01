@@ -71,10 +71,4 @@ public class Game
         }
         return false;
     }
-
-    private bool isStaleMate()
-    {
-        return false;
-        //TODO
-    }
 }
