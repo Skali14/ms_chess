@@ -2,28 +2,28 @@ using NUnit.Framework;
 using UnityEngine;
 
 
-public class InitBoardTest
+public class BoardInitTest
 {
-    private Chessboard _chessboard = new Chessboard();
+    private readonly Chessboard _chessboard = new Chessboard();
 
     [Test]
     public void TestWhiteInitSpaces()
     {
         Debug.Log("testing first row initiation");
         //first row 
-        for (char c = 'A'; c <= 'H'; c++)
+        for (var c = 'A'; c <= 'H'; c++)
         {
-            Piece piece = _chessboard.getSquare(1, 'A');
-            bool color = piece.IsWhite;
+            var piece = _chessboard.getSquare(1, 'A');
+            var color = piece.IsWhite;
             Assert.IsTrue(color, $"the color of the (1, {c}) ");
         }
 
         Debug.Log("testing second row initiation");
         //second row
-        for (char c = 'A'; c <= 'H'; c++)
+        for (var c = 'A'; c <= 'H'; c++)
         {
-            Piece piece = _chessboard.getSquare(2, 'A');
-            bool color = piece.IsWhite;
+            var piece = _chessboard.getSquare(2, 'A');
+            var color = piece.IsWhite;
             Assert.IsTrue(color);
         }
     }
@@ -33,19 +33,19 @@ public class InitBoardTest
     {
         Debug.Log("testing seventh row initiation");
         //seventh row 
-        for (char c = 'A'; c <= 'H'; c++)
+        for (var c = 'A'; c <= 'H'; c++)
         {
-            Piece piece = _chessboard.getSquare(7, 'A');
-            bool color = piece.IsWhite;
+            var piece = _chessboard.getSquare(7, 'A');
+            var color = piece.IsWhite;
             Assert.IsTrue(!color);
         }
 
         Debug.Log("testing eight row initiation");
         //eigth row
-        for (char c = 'A'; c <= 'H'; c++)
+        for (var c = 'A'; c <= 'H'; c++)
         {
-            Piece piece = _chessboard.getSquare(8, 'A');
-            bool color = piece.IsWhite;
+            var piece = _chessboard.getSquare(8, 'A');
+            var color = piece.IsWhite;
             Assert.IsTrue(!color);
         }
     }
@@ -54,7 +54,7 @@ public class InitBoardTest
     public void TestInitKingWhite()
     {
         Debug.Log("testing white king position");
-        Piece king = _chessboard.getSquare(1, 'E');
+        var king = _chessboard.getSquare(1, 'E');
         Debug.Log(king.GetType());
         Assert.NotNull(king, "Expected a kind at (1, D) but found null");
         Assert.IsTrue(king is King, "Piece at (1, D) is not King");
@@ -65,7 +65,7 @@ public class InitBoardTest
     public void TestInitQueenWhite()
     {
         Debug.Log("testing white queen position");
-        Piece queen = _chessboard.getSquare(1, 'D');
+        var queen = _chessboard.getSquare(1, 'D');
         Debug.Log(queen.GetType());
         Assert.NotNull(queen, "Expected a kind at (1, E) but found null");
         Assert.IsTrue(queen is Queen, "Piece at (1, E) is not queen");
@@ -76,7 +76,7 @@ public class InitBoardTest
     public void TestInitQueenBlack()
     {
         Debug.Log("testing black queen position");
-        Piece queen = _chessboard.getSquare(8, 'D');
+        var queen = _chessboard.getSquare(8, 'D');
         Debug.Log(queen.GetType());
         Assert.NotNull(queen, "Expected a kind at (8, E) but found null");
         Assert.IsTrue(queen is Queen, "Piece at (8, E) is not queen");
@@ -87,7 +87,7 @@ public class InitBoardTest
     public void TestInitKingBlack()
     {
         Debug.Log("testing black king position");
-        Piece king = _chessboard.getSquare(8, 'E');
+        var king = _chessboard.getSquare(8, 'E');
         Debug.Log(king.GetType());
         Assert.NotNull(king, "Expected a kind at (8, D) but found null");
         Assert.IsTrue(king is King, "Piece at (8, D) is not King");
@@ -97,7 +97,7 @@ public class InitBoardTest
     public void TestInitRookWhite()
     {
         Debug.Log("testing white rook position");
-        Piece rook = _chessboard.getSquare(1, 'A');
+        var rook = _chessboard.getSquare(1, 'A');
         Debug.Log(rook.GetType());
         Assert.NotNull(rook, "Expected a kind at (1, A) but found null");
         Assert.IsTrue(rook is Rook, "Piece at (1, A) is not rook");
@@ -107,7 +107,7 @@ public class InitBoardTest
     public void TestInitRookBlack()
     {
         Debug.Log("testing black rook position");
-        Piece rook = _chessboard.getSquare(8, 'A');
+        var rook = _chessboard.getSquare(8, 'A');
         Debug.Log(rook.GetType());
         Assert.NotNull(rook, "Expected a kind at (8, A) but found null");
         Assert.IsTrue(rook is Rook, "Piece at (8, A) is not rook");
@@ -117,7 +117,7 @@ public class InitBoardTest
     public void TestInitBishopWhite()
     {
         Debug.Log("testing white bishop position");
-        Piece bishop = _chessboard.getSquare(1, 'C');
+        var bishop = _chessboard.getSquare(1, 'C');
         Debug.Log(bishop.GetType());
         Assert.NotNull(bishop, "Expected a kind at (1, B) but found null");
         Assert.IsTrue(bishop is Bishop, "Piece at (1, B) is not bishop");
@@ -131,6 +131,26 @@ public class InitBoardTest
         Debug.Log(bishop.GetType());
         Assert.NotNull(bishop, "Expected a kind at (8, B) but found null");
         Assert.IsTrue(bishop is Bishop, "Piece at (8, B) is not bishop");
+    }
+
+    [Test]
+    public void TestInitKnightWhite()
+    {
+        Debug.Log("testing white knight position");
+        var knight = _chessboard.getSquare(1, 'B');
+        Debug.Log(knight.GetType());
+        Assert.NotNull(knight, "Expected a kind at (1, B) but found null");
+        Assert.IsTrue(knight is Knight, "Piece at (1, B) is not knight");
+    }
+
+    [Test]
+    public void TestInitKnightBlack()
+    {
+        Debug.Log("testing black knight position");
+        var knight = _chessboard.getSquare(8, 'B');
+        Debug.Log(knight.GetType());
+        Assert.NotNull(knight, "Expected a kind at (8, B) but found null");
+        Assert.IsTrue(knight is Knight, "Piece at (8, B) is not knight");
     }
 
     [Test]
