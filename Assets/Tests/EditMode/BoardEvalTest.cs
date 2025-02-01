@@ -53,7 +53,7 @@ public class NewTestScript
     public void testInitKingWhite() 
     {
         Debug.Log("testing white king posistion");
-        Piece king = chessboard.getSquare(1, 'D');
+        Piece king = chessboard.getSquare(1, 'E');
         Debug.Log(king.GetType());
         Assert.NotNull(king, "Expected a kind at (1, D) but found null");
         Assert.IsTrue(king is King, "Piece at (1, D) is not King");
@@ -63,11 +63,11 @@ public class NewTestScript
     [Test]
     public void testInitQueenWhite()
     {
-        Debug.Log("testing white king posistion");
-        Piece queen = chessboard.getSquare(1, 'E');
+        Debug.Log("testing white queen posistion");
+        Piece queen = chessboard.getSquare(1, 'D');
         Debug.Log(queen.GetType());
         Assert.NotNull(queen, "Expected a kind at (1, E) but found null");
-        Assert.IsTrue(queen is King, "Piece at (1, E) is not King");
+        Assert.IsTrue(queen is Queen, "Piece at (1, E) is not queen");
         Assert.IsTrue(queen.IsWhite, "Piece at (1, E) is not white");
     }
 }
