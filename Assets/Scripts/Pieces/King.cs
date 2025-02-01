@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class King : Piece
 {
+    public bool wasMoved = false; //needed for castling checks
+
     public King(bool isWhite) : base(isWhite)
     {
     }
