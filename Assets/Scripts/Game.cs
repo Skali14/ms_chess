@@ -1,25 +1,27 @@
+using System.ComponentModel;
+using Codice.CM.Client.Differences;
 using UnityEngine;
 
 public class Game
 {
-    public Chessboard board { get; private set; }
+    public Chessboard Board { get; private set; }
     public bool IsWhiteTurn { get; private set; }
 
-    public bool isStaleMate { get; private set; }
+    public bool StaleMate { get; private set; }
 
     public (int StartRow, int StartCol, int DestRow, int DestCol, Piece MovedPiece)? LastMove { get; private set; }
 
     public Game()
     {
-        board = new Chessboard();
+        Board = new Chessboard();
         IsWhiteTurn = true;
     }
 
     public bool makeMove(int startRow, char startCol, int destRow, char destCol)
     {
         //TODO
-        Piece piece = board.getSquare(startRow, startCol);
-        if (piece != null && piece.IsValidMove(startRow, startCol, destRow, destCol, board.Squares, this))
+        Piece piece = Board.getSquare(startRow, startCol);
+        if (piece != null && piece.IsValidMove(startRow, startCol, destRow, destCol, Board.Squares, this))
         {
             LastMove = (startRow, startCol, destRow, destCol, piece);
             return false;
@@ -32,44 +34,87 @@ public class Game
 
     private bool isCheckMate()
     {
-        //TODO
-        return false;
+        if (!isCheck(IsWhiteTurn))
+        {
+            return false;
+        }
+
+        //find kings position
+        (int kingRow, int kingCol) = findKingPos(IsWhiteTurn);
+
+        Piece king = Board.Squares[kingRow, kingCol];
+
+        // Check if the king can escape
+        int[] directions = { -1, 0, 1 };
+        foreach (int dRow in directions)
+        {
+            foreach (int dCol in directions)
+            {
+                if (dRow == 0 && dCol == 0) continue; // Skip current position
+
+                int newRow = kingRow + dRow;
+                int newCol = kingCol + dCol;
+
+                if (Board.isValidPosition(newRow, newCol)) // Check board boundaries
+                {
+                    Piece temp = Board.Squares[newRow, newCol];
+
+                    if (temp == null || temp.IsWhite != IsWhiteTurn) // If empty or capturable
+                    {
+                        // Simulate the king's move
+                        Board.Squares[kingRow, kingCol] = null;
+                        Board.Squares[newRow, newCol] = king;
+
+                        bool stillInCheck = isCheck(IsWhiteTurn);
+
+                        // Undo move
+                        Board.Squares[kingRow, kingCol] = king;
+                        Board.Squares[newRow, newCol] = temp;
+
+                        if (!stillInCheck)
+                            return false; // If king can escape, it's not checkmate
+                    }
+                }
+            }
+        }
+
+        //Check if any piece can block the check or capture the attacker
+
     }
 
     private bool isCheck(bool isWhite)
     {
-        bool foundKing = false;
-        int kingRow = -1;
-        int kingCol = -1;
-
-        for (int i = 0; i < 8 && !foundKing; i++)  // Stop outer loop when found
-        {
-            for (int j = 0; j < 8; j++)
-            {
-                Piece piece = board.Squares[i, j];
-                if (piece is King && piece.IsWhite == isWhite)
-                {
-                    kingRow = i;
-                    kingCol = j;
-                    foundKing = true;
-                    break;
-                }
-            }
-        }
+        (int kingRow, int kingCol) = findKingPos(isWhite);
 
         //check if any opponent piece can attack the king
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 8; j++)
             {
-                Piece piece = board.Squares[i, j];
-                if (piece != null && piece.IsWhite != isWhite && piece.IsValidMove(i, j, kingRow, kingCol, board.Squares, this))
+                Piece piece = Board.Squares[i, j];
+                if (piece != null && piece.IsWhite != isWhite && piece.IsValidMove(i, j, kingRow, kingCol, Board.Squares, this))
                 {
                     return true; //King is in check
                 }
             }
         }
         return false;
+    }
+
+    private (int row, int col) findKingPos(bool isWhite)
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                Piece piece = Board.Squares[i, j];
+                if (piece is King && piece.IsWhite == isWhite)
+                {
+                    return (i, j);
+                }
+            }
+        }
+        return (-1, -1);
     }
 
     private bool isStaleMate()

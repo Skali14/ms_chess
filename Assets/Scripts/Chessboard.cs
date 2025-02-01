@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class Chessboard
 {
@@ -49,10 +50,15 @@ public class Chessboard
 
     public Piece getSquare(int i, char c) {
         if (c >= 'A' && c <=  'H' && i >= 1 && i <= 8) { 
-            return Squares[i - 1, c - 65];
+            return Squares[Math.Abs(i - 1 - 7), c - 65];
         } else
         {
             throw new System.Exception("Out of bounds");
         }
+    }
+
+    public bool isValidPosition(int row, int col)
+    {
+        return row >= 0 && row < 8 && col >= 0 && col < 8;
     }
 }
