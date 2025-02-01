@@ -17,12 +17,14 @@ public class Game
         IsWhiteTurn = true;
     }
 
-    public bool makeMove(int startRow, char startCol, int destRow, char destCol)
+    public bool makeMove(int startRowRaw, char startColChar, int destRow, char destCol)
     {
         //TODO
-        Piece piece = Board.getSquare(startRow, startCol);
+        (int startRow, int startCol) = Board.ConvertChessCoordinates(startRowRaw, startColChar);
+        Piece piece = Board.Squares[startRow, startCol];
         if (piece != null && piece.IsValidMove(startRow, startCol, destRow, destCol, Board.Squares, this))
         {
+            
             LastMove = (startRow, startCol, destRow, destCol, piece);
             return false;
         }
@@ -40,7 +42,7 @@ public class Game
         }
 
         //find kings position
-        (int kingRow, int kingCol) = findKingPos(IsWhiteTurn);
+        (int kingRow, int kingCol) = FindKingPos(IsWhiteTurn);
 
         Piece king = Board.Squares[kingRow, kingCol];
 
@@ -61,18 +63,10 @@ public class Game
 
                     if (temp == null || temp.IsWhite != IsWhiteTurn) // If empty or capturable
                     {
-                        // Simulate the king's move
-                        Board.Squares[kingRow, kingCol] = null;
-                        Board.Squares[newRow, newCol] = king;
-
-                        bool stillInCheck = isCheck(IsWhiteTurn);
-
-                        // Undo move
-                        Board.Squares[kingRow, kingCol] = king;
-                        Board.Squares[newRow, newCol] = temp;
-
-                        if (!stillInCheck)
-                            return false; // If king can escape, it's not checkmate
+                        if (!simulateMove(kingRow, kingCol, newRow, newCol))
+                        {
+                            return false;
+                        } 
                     }
                 }
             }
@@ -93,19 +87,10 @@ public class Game
                         {
                             if (piece.IsValidMove(i, j, destRow, destCol, Board.Squares, this))
                             {
-                                // Simulate the move
-                                Piece temp = Board.Squares[destRow, destCol];
-                                Board.Squares[destRow, destCol] = piece;
-                                Board.Squares[i, j] = null;
-
-                                bool stillInCheck = isCheck(IsWhiteTurn);
-
-                                // Undo move
-                                Board.Squares[i, j] = piece;
-                                Board.Squares[destRow, destCol] = temp;
-
-                                if (!stillInCheck)
-                                    return false; // If any move can save the king, not checkmate
+                                if (!simulateMove(i, j, destRow, destCol))
+                                {
+                                    return false;
+                                }
                             }
                         }
                     }
@@ -119,7 +104,7 @@ public class Game
 
     private bool isCheck(bool isWhite)
     {
-        (int kingRow, int kingCol) = findKingPos(isWhite);
+        (int kingRow, int kingCol) = FindKingPos(isWhite);
 
         //check if any opponent piece can attack the king
         for (int i = 0; i < 8; i++)
@@ -136,7 +121,7 @@ public class Game
         return false;
     }
 
-    private (int row, int col) findKingPos(bool isWhite)
+    private (int row, int col) FindKingPos(bool isWhite)
     {
         for (int i = 0; i < 8; i++)
         {
@@ -152,9 +137,28 @@ public class Game
         return (-1, -1);
     }
 
-    private bool isStaleMate()
+    private bool IsStaleMate()
     {
         return false;
         //TODO
+    }
+
+
+    //Simulates move and tests resulting board for check
+    private bool simulateMove(int startRow, int startCol, int destRow, int destCol)
+    {
+        Piece movingPiece = Board.Squares[startRow, startCol];
+        Piece tempPiece = Board.Squares[destRow, destCol];
+
+        Board.Squares[destRow, destCol] = movingPiece;
+        Board.Squares[startRow, startCol] = null;
+
+        bool stillInCheck = isCheck(IsWhiteTurn);
+
+        // Undo move
+        Board.Squares[startRow, startCol] = movingPiece;
+        Board.Squares[destRow, destCol] = tempPiece;
+
+        return stillInCheck;
     }
 }
