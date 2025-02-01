@@ -79,8 +79,42 @@ public class Game
         }
 
         //Check if any piece can block the check or capture the attacker
-        return false;
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                Piece piece = Board.Squares[i, j];
 
+                if (piece != null && piece.IsWhite == IsWhiteTurn) // Current player's piece
+                {
+                    for (int destRow = 0; destRow < 8; destRow++)
+                    {
+                        for (int destCol = 0; destCol < 8; destCol++)
+                        {
+                            if (piece.IsValidMove(i, j, destRow, destCol, Board.Squares, this))
+                            {
+                                // Simulate the move
+                                Piece temp = Board.Squares[destRow, destCol];
+                                Board.Squares[destRow, destCol] = piece;
+                                Board.Squares[i, j] = null;
+
+                                bool stillInCheck = isCheck(IsWhiteTurn);
+
+                                // Undo move
+                                Board.Squares[i, j] = piece;
+                                Board.Squares[destRow, destCol] = temp;
+
+                                if (!stillInCheck)
+                                    return false; // If any move can save the king, not checkmate
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // If no escape, it's checkmate
+        return true;
     }
 
     private bool isCheck(bool isWhite)
