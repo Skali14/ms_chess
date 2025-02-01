@@ -13,7 +13,7 @@ public class Chessboard
     private void intializeBoard()
     {
         // initialize Pawns
-        for (int i = 0; i < Squares.Length; i++)
+        for (int i = 0; i < 8; i++)
         {
             Squares[1, i] = new Pawn(false);
             Squares[6, i] = new Pawn(true);
