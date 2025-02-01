@@ -79,6 +79,7 @@ public class Game
         }
 
         //Check if any piece can block the check or capture the attacker
+        return false;
 
     }
 
