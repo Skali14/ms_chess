@@ -28,7 +28,12 @@ public class GameHandler : MonoBehaviour
         StartCoroutine(resignAndFade());
     }
 
-    public IEnumerator resignAndFade()
+    public void doGameOver()
+    {
+        StartCoroutine(gameOverAndFade());
+    }
+
+    private IEnumerator resignAndFade()
     {
         Coroutine fading = StartCoroutine(FadeInBlackOut());
         GetComponent<Button>().interactable = false;
@@ -45,10 +50,10 @@ public class GameHandler : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    private void doGameOver()
+    private IEnumerator gameOverAndFade()
     {
+        Coroutine fading = StartCoroutine(FadeInBlackOut());
         GetComponent<Button>().interactable = false;
-        Time.timeScale = 0f;
         //TODO query gameEnd and draw from Game.cs and update result accordingly
         /*if (Game.gameEnd == true && Game.draw == true) 
         {
@@ -68,6 +73,8 @@ public class GameHandler : MonoBehaviour
         winner = 0;
 
         uiManager.TransitionToEndScene();
+        yield return fading;
+        Time.timeScale = 0f;
     }
 
     private IEnumerator FadeInBlackOut()
