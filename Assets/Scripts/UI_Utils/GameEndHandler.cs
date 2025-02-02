@@ -5,7 +5,7 @@ using TMPro;
 public class GameEndHandler : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    //CHECKMATE = 0, RESIGNATION = 1, DRAW = 2
+    //CHECKMATE = 0, RESIGNATION = 1, STALEMATE = 2
 
     //BLACK = 0, WHITE = 1, NONE = 2
 
@@ -43,7 +43,7 @@ public class GameEndHandler : MonoBehaviour
                 TMP_Result.text = "RESIGNATION";
                 break;
              case 2:
-                TMP_Result.text = "DRAW";
+                TMP_Result.text = "STALEMATE";
                 break;
         }
 

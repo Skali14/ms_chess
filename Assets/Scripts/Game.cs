@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Codice.CM.Client.Differences;
 using UnityEngine;
 
-public class Game
+public class Game : MonoBehaviour
 {
     public Chessboard Board { get; private set; }
 
@@ -14,7 +14,9 @@ public class Game
 
     public (int StartRow, int StartCol, int DestRow, int DestCol, Piece MovedPiece)? LastMove { get; private set; }
 
-    public List<Piece> CapturedPieces; 
+    public List<Piece> CapturedPieces;
+
+    public static Game instance;
 
     public Game()
     {
@@ -22,6 +24,7 @@ public class Game
         IsWhiteTurn = true;
         //dummy lastmove
         LastMove = (0, 0, 0, 0, new Rook(true));
+        instance = this;
     }
 
     public bool MakeMove(int startRowRaw, char startColChar, int destRowRaw, char destColChar)
@@ -34,7 +37,7 @@ public class Game
         {
             if (piece is not King || !(piece as King).justCastled)
             {
-                // Simulate the move to ensure it doesn’t leave the king in check
+                // Simulate the move to ensure it doesnï¿½t leave the king in check
                 if (SimulateMove(startRow, startCol, destRow, destCol))
                 {
                     return false; // Move would result in check, so it's not allowed
