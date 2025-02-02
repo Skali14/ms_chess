@@ -16,35 +16,35 @@ public class Chessboard
         // initialize Pawns
         for (int i = 0; i < 8; i++)
         {
-            Squares[1, i] = new Pawn(false);
-            Squares[6, i] = new Pawn(true);
+            Squares[1, i] = new Pawn(false, "bp_" + (i+1));
+            Squares[6, i] = new Pawn(true, "wp_" + (i+1));
         }
 
         // initialize Rooks
-        Squares[0, 0] = new Rook(false);
-        Squares[0, 7] = new Rook(false);
-        Squares[7, 0] = new Rook(true);
-        Squares[7, 7] = new Rook(true);
+        Squares[0, 0] = new Rook(false, "br_1");
+        Squares[0, 7] = new Rook(false, "br_2");
+        Squares[7, 0] = new Rook(true, "wr_1");
+        Squares[7, 7] = new Rook(true, "wr_2");
 
         // initialize Knights
-        Squares[0, 1] = new Knight(false);
-        Squares[0, 6] = new Knight(false);
-        Squares[7, 1] = new Knight(true);
-        Squares[7, 6] = new Knight(true);
+        Squares[0, 1] = new Knight(false, "bn_1");
+        Squares[0, 6] = new Knight(false, "bn_2");
+        Squares[7, 1] = new Knight(true, "wn_1");
+        Squares[7, 6] = new Knight(true, "wn_2");
 
         // initialize Bishops
-        Squares[0, 2] = new Bishop(false);
-        Squares[0, 5] = new Bishop(false);
-        Squares[7, 2] = new Bishop(true);
-        Squares[7, 5] = new Bishop(true);
+        Squares[0, 2] = new Bishop(false, "bb_1");
+        Squares[0, 5] = new Bishop(false, "bb_2");
+        Squares[7, 2] = new Bishop(true, "wb_1");
+        Squares[7, 5] = new Bishop(true, "wb_2");
 
         // initialize Queen
-        Squares[0, 3] = new Queen(false);
-        Squares[7, 3] = new Queen(true);
+        Squares[0, 3] = new Queen(false, "bq_1");
+        Squares[7, 3] = new Queen(true, "wq_1");
 
         // initialize King
-        Squares[0, 4] = new King(false);
-        Squares[7, 4] = new King(true);
+        Squares[0, 4] = new King(false, "bk_1");
+        Squares[7, 4] = new King(true, "wk_1");
     }
 
 
