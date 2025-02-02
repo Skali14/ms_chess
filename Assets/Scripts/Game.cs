@@ -14,9 +14,9 @@ public class Game : MonoBehaviour
 
     public (int StartRow, int StartCol, int DestRow, int DestCol, Piece MovedPiece)? LastMove { get; private set; }
 
-    public List<Piece> CapturedPieces;
 
     public static Game instance;
+    public List<Piece> CapturedPieces; 
 
     public Game()
     {
@@ -37,7 +37,7 @@ public class Game : MonoBehaviour
         {
             if (piece is not King || !(piece as King).justCastled)
             {
-                // Simulate the move to ensure it doesn�t leave the king in check
+                // Simulate the move to ensure it doesn’t leave the king in check
                 if (SimulateMove(startRow, startCol, destRow, destCol))
                 {
                     return false; // Move would result in check, so it's not allowed
@@ -75,7 +75,8 @@ public class Game : MonoBehaviour
 
             LastMove = (startRow, startCol, destRow, destCol, piece);
 
-            
+            // Switch turns
+            IsWhiteTurn = !IsWhiteTurn;
 
             // Check for checkmate or stalemate
             if (IsCheckMate())
@@ -89,9 +90,6 @@ public class Game : MonoBehaviour
                 StaleMate = true;
                 GameEnd = true;
             }
-
-            // Switch turns
-            IsWhiteTurn = !IsWhiteTurn;
 
             return true;
         }
@@ -107,6 +105,8 @@ public class Game : MonoBehaviour
         {
             return false;
         }
+
+        Debug.Log("Here before Kings options");
 
         //find kings position
         (int kingRow, int kingCol) = FindKingPos(IsWhiteTurn);
@@ -139,6 +139,8 @@ public class Game : MonoBehaviour
             }
         }
 
+        Debug.Log("Here after Kings options");
+
         //Check if any piece can block the check or capture the attacker
         for (int i = 0; i < 8; i++)
         {
@@ -156,6 +158,7 @@ public class Game : MonoBehaviour
                             {
                                 if (!SimulateMove(i, j, destRow, destCol))
                                 {
+                                    Debug.Log($"Valid move: i={i}, j={j}, destRow={destRow}, destCol={destCol}");
                                     return false;
                                 }
                             }
@@ -164,6 +167,7 @@ public class Game : MonoBehaviour
                 }
             }
         }
+        Debug.Log("No escape");
 
         // If no escape, it's checkmate
         return true;
