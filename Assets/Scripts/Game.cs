@@ -7,10 +7,10 @@ public class Game : MonoBehaviour
 {
     public Chessboard Board { get; private set; }
 
-    public static bool IsWhiteTurn;
+    public bool IsWhiteTurn;
 
-    public static bool StaleMate;
-    public static bool GameEnd;
+    public bool StaleMate;
+    public bool GameEnd;
 
     public (int StartRow, int StartCol, int DestRow, int DestCol, Piece MovedPiece)? LastMove { get; private set; }
 
@@ -171,6 +171,7 @@ public class Game : MonoBehaviour
 
         // If no escape, it's checkmate
         return true;
+        
     }
 
     public bool IsCheck(bool isWhite)

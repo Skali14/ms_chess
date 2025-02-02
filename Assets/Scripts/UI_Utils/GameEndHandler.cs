@@ -59,6 +59,12 @@ public class GameEndHandler : MonoBehaviour
                 Black_Image.enabled = false;
                 White_Image.enabled = true;
                 break;
+            case 2:
+                TMP_ColorWon.text = "NO ONE won!";
+                Black_Image.enabled = false;
+                White_Image.enabled = false;
+                break;
+
         }
     }
 

@@ -5553,6 +5553,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f93e6bb7724e5724f8a3a6c7f9658c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsWhiteTurn: 1
+  StaleMate: 0
+  GameEnd: 0
 --- !u!1 &1505276862
 GameObject:
   m_ObjectHideFlags: 0
@@ -7269,7 +7272,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2008223313}
-        m_TargetAssemblyTypeName: GameHandler, Assembly-CSharp
+        m_TargetAssemblyTypeName: GameHandler, NewAssembly
         m_MethodName: doResign
         m_Mode: 1
         m_Arguments:

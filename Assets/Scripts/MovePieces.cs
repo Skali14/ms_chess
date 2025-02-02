@@ -14,7 +14,7 @@ public class movePieces : MonoBehaviour
     private Vector3 endPos;
     private Game game;
 
-    private void Awake()
+    private void Start()
     {
         game = Game.instance;
     }
@@ -22,7 +22,7 @@ public class movePieces : MonoBehaviour
     private void Update()
     {
         //TODO
-        if(dragging /*&& !Game.gameEnd*/)
+        if(dragging && !game.GameEnd)
         {
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
         }
@@ -31,7 +31,7 @@ public class movePieces : MonoBehaviour
     public void OnMouseDown()
     {
         //TODO
-        if(/*!Game.gameEnd*/true)
+        if(!game.GameEnd)
         {
             initialPos = transform.position;
             offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -43,7 +43,7 @@ public class movePieces : MonoBehaviour
     public void OnMouseUp()
     {
         //TODO
-        if(/*!Game.gameEnd*/true)
+        if(!game.GameEnd)
         {
             dragging = false;
             endPos = transform.position;
@@ -58,7 +58,6 @@ public class movePieces : MonoBehaviour
             {
                 SnapToNearestCenter(initialPos);
             }
-            //SnapToNearestCenter(transform.position);
         }
         
     }
