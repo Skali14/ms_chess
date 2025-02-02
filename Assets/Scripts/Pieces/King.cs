@@ -15,6 +15,13 @@ public class King : Piece
     {
         if (startRow == destRow && startCol == destCol) return false;
 
+        // Check if destination is occupied by a piece of the same color
+        Piece destPiece = squares[destRow, destCol];
+        if (destPiece != null && destPiece.IsWhite == IsWhite)
+        {
+            return false;
+        }
+
         int rowForCastling = IsWhite ? 7 : 0;
 
         if (!wasMoved && destCol == 0 && destRow == rowForCastling && !game.IsCheck(IsWhite)) //allow castling for clicking on rook - long side
