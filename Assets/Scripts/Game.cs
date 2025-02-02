@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel;
 using Codice.CM.Client.Differences;
 using UnityEngine;
@@ -5,12 +6,15 @@ using UnityEngine;
 public class Game
 {
     public Chessboard Board { get; private set; }
-    public bool IsWhiteTurn { get; private set; }
+
+    public static bool IsWhiteTurn;
 
     public static bool StaleMate;
     public static bool GameEnd;
 
     public (int StartRow, int StartCol, int DestRow, int DestCol, Piece MovedPiece)? LastMove { get; private set; }
+
+    public List<Piece> CapturedPieces; 
 
     public Game()
     {
@@ -26,15 +30,37 @@ public class Game
         Piece piece = Board.Squares[startRow, startCol];
         if (piece != null && piece.IsWhite == IsWhiteTurn && piece.IsValidMove(startRow, startCol, destRow, destCol, Board.Squares, this))
         {
-            // Simulate the move to ensure it doesn’t leave the king in check
-            if (simulateMove(startRow, startCol, destRow, destCol))
+            if (piece is not King || !(piece as King).justCastled)
             {
-                return false; // Move would result in check, so it's not allowed
-            }
+                // Simulate the move to ensure it doesn’t leave the king in check
+                if (simulateMove(startRow, startCol, destRow, destCol))
+                {
+                    return false; // Move would result in check, so it's not allowed
+                }
 
-            // Move the piece
-            Board.Squares[destRow, destCol] = piece;
-            Board.Squares[startRow, startCol] = null;
+                //Store captured pieces
+                Piece captured = Board.Squares[destRow, destCol];
+                if (captured != null)
+                {
+                    CapturedPieces.Add(captured);
+                }
+
+                // Move the piece
+                Board.Squares[destRow, destCol] = piece;
+                Board.Squares[startRow, startCol] = null;
+
+                if (piece is Rook rook)
+                {
+                    rook.wasMoved = true;
+                }
+                else if (piece is King king)
+                {
+                    king.wasMoved = true;
+                }
+            } else if (piece is King king && king.justCastled)
+            {
+                king.justCastled = false;
+            }
 
             // If the piece is a pawn reaching the last rank, promote it (for simplicity, to a queen)
             if (piece is Pawn && (destRow == 0 || destRow == 7))
@@ -135,7 +161,7 @@ public class Game
         return true;
     }
 
-    private bool isCheck(bool isWhite)
+    public bool isCheck(bool isWhite)
     {
         (int kingRow, int kingCol) = FindKingPos(isWhite);
 
@@ -210,7 +236,7 @@ public class Game
 
 
     //Simulates move and tests resulting board for check
-    private bool simulateMove(int startRow, int startCol, int destRow, int destCol)
+    public bool simulateMove(int startRow, int startCol, int destRow, int destCol)
     {
         Piece movingPiece = Board.Squares[startRow, startCol];
         Piece tempPiece = Board.Squares[destRow, destCol];

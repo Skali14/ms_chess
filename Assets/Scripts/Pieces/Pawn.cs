@@ -46,6 +46,8 @@ public class Pawn : Piece
             if (lastDestRow == startRow && Math.Abs(lastDestCol - startCol) == 1 && destRow == lastDestRow + direction && destCol == lastDestCol)
             {
                 squares[lastDestRow, lastDestCol] = null; // captured Pawn
+                game.CapturedPieces.Add(lastPiece);
+
                 return true; // En passant capture is valid
             }
         }
