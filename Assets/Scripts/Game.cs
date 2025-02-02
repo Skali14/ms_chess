@@ -21,6 +21,7 @@ public class Game : MonoBehaviour
     public Game()
     {
         Board = new Chessboard();
+        CapturedPieces = new List<Piece>();
         IsWhiteTurn = true;
         //dummy lastmove
         LastMove = (0, 0, 0, 0, new Rook(true));
