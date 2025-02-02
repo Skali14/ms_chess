@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public class movePieces : MonoBehaviour
 {
+    public Sprite queenSprite;
     [HideInInspector]
     private bool dragging = false;
     private Vector3 offset;
@@ -184,5 +185,10 @@ public class movePieces : MonoBehaviour
             case "bq_1": transform.position = new Vector3(-5.580657f, -3.702001f, 0f); break;
             case "bk_2": transform.position = new Vector3(-5.359657f, -3.698f, 0f); break;
         }
+    }
+
+    public void PromoteToQueen()
+    {
+        GetComponent<SpriteRenderer>().sprite = queenSprite;
     }
 }

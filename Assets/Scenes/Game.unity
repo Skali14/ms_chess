@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &2575882
@@ -669,6 +670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -752838289848987854, guid: ee26175ed8078b04da131df0b0ea7159, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &198727571
@@ -922,6 +924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -5990683896311285210, guid: 571ecff78d8f7f644be52be6b1252898, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &237948489
@@ -1373,6 +1376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -5990683896311285210, guid: 571ecff78d8f7f644be52be6b1252898, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &388375863
@@ -1609,6 +1613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -752838289848987854, guid: ee26175ed8078b04da131df0b0ea7159, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &440420467
@@ -1895,6 +1900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &560066574
@@ -2146,6 +2152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -5990683896311285210, guid: 571ecff78d8f7f644be52be6b1252898, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &596711469
@@ -2379,6 +2386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -5990683896311285210, guid: 571ecff78d8f7f644be52be6b1252898, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &679963922
@@ -2603,6 +2611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &708460740
@@ -2799,6 +2808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &844251545
@@ -2948,6 +2958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &864459912
@@ -3097,6 +3108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -752838289848987854, guid: ee26175ed8078b04da131df0b0ea7159, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &920976833
@@ -3408,6 +3420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &956814735
@@ -3857,6 +3870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1001411900
@@ -4006,6 +4020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1123933513
@@ -4155,6 +4170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -5990683896311285210, guid: 571ecff78d8f7f644be52be6b1252898, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1138538559
@@ -4304,6 +4320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1177645528
@@ -4540,6 +4557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -752838289848987854, guid: ee26175ed8078b04da131df0b0ea7159, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1237399176
@@ -4689,6 +4707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -752838289848987854, guid: ee26175ed8078b04da131df0b0ea7159, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1265444202
@@ -4838,6 +4857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1269431334
@@ -4987,6 +5007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1295839599
@@ -5223,6 +5244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -752838289848987854, guid: ee26175ed8078b04da131df0b0ea7159, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1310755069
@@ -5372,6 +5394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -752838289848987854, guid: ee26175ed8078b04da131df0b0ea7159, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1349346783
@@ -5788,6 +5811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -5990683896311285210, guid: 571ecff78d8f7f644be52be6b1252898, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1530243568
@@ -5937,6 +5961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1715992761
@@ -6173,6 +6198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1809273391
@@ -6322,6 +6348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1815253357
@@ -6645,6 +6672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -5990683896311285210, guid: 571ecff78d8f7f644be52be6b1252898, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1869043563
@@ -6794,6 +6822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -752838289848987854, guid: ee26175ed8078b04da131df0b0ea7159, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1880478322
@@ -6990,6 +7019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1944164198
@@ -7139,6 +7169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: 0}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &1959640860
@@ -7521,6 +7552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fb41a1f3695a540b13e51c4f27adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queenSprite: {fileID: -5990683896311285210, guid: 571ecff78d8f7f644be52be6b1252898, type: 3}
   squareSize: 1.099949
   chessboardOrigin: {x: -4.42095, y: -4.09497, z: 0}
 --- !u!61 &2098125594
