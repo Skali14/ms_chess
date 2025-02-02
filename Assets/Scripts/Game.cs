@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Text.RegularExpressions;
 using Codice.CM.Client.Differences;
 using UnityEngine;
 
@@ -16,14 +17,15 @@ public class Game : MonoBehaviour
 
 
     public static Game instance;
-    public List<Piece> CapturedPieces; 
+    public List<Piece> CapturedPieces;
 
     public Game()
     {
         Board = new Chessboard();
+        CapturedPieces = new List<Piece>();
         IsWhiteTurn = true;
         //dummy lastmove
-        LastMove = (0, 0, 0, 0, new Rook(true));
+        LastMove = (0, 0, 0, 0, new Rook(true, "dummy"));
         instance = this;
     }
 
@@ -47,6 +49,7 @@ public class Game : MonoBehaviour
                 Piece captured = Board.Squares[destRow, destCol];
                 if (captured != null)
                 {
+                    GameObject.FindGameObjectWithTag(captured.Tag).GetComponent<movePieces>().MoveToCapturedArea();
                     CapturedPieces.Add(captured);
                 }
 
@@ -70,7 +73,8 @@ public class Game : MonoBehaviour
             // If the piece is a pawn reaching the last rank, promote it (for simplicity, to a queen)
             if (piece is Pawn && (destRow == 0 || destRow == 7))
             {
-                Board.Squares[destRow, destCol] = new Queen(piece.IsWhite);
+                GameObject.FindGameObjectWithTag(Board.Squares[destRow, destCol].Tag).GetComponent<movePieces>().PromoteToQueen();
+                Board.Squares[destRow, destCol] = new Queen(piece.IsWhite, Board.Squares[destRow, destCol].Tag /*TODO*/);
             }
 
             LastMove = (startRow, startCol, destRow, destCol, piece);

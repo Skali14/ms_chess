@@ -3,7 +3,7 @@ using System;
 
 public class Pawn : Piece
 {
-    public Pawn(bool isWhite) : base(isWhite) { }
+    public Pawn(bool isWhite, string tag) : base(isWhite, tag) { }
 
     public override bool IsValidMove(int startRow, int startCol, int destRow, int destCol, Piece[,] squares, Game game)
     {

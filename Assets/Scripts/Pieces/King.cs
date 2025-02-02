@@ -7,7 +7,7 @@ public class King : Piece
 
     public bool justCastled = false;
 
-    public King(bool isWhite) : base(isWhite)
+    public King(bool isWhite, string tag) : base(isWhite, tag)
     {
     }
 
