@@ -17,13 +17,13 @@ public class King : Piece
 
         int rowForCastling = IsWhite ? 7 : 0;
 
-        if (!wasMoved && destCol == 0 && destRow == rowForCastling && !game.isCheck(IsWhite)) //allow castling for clicking on rook - long side
+        if (!wasMoved && destCol == 0 && destRow == rowForCastling && !game.IsCheck(IsWhite)) //allow castling for clicking on rook - long side
         {
             if (squares[rowForCastling, 1] == null || squares[rowForCastling, 2] == null || squares[rowForCastling, 3] == null)
             {
                 return false;
             }
-            if (game.simulateMove(startRow, startCol, destRow, 2) || game.simulateMove(startRow, startCol, destRow, 3))
+            if (game.SimulateMove(startRow, startCol, destRow, 2) || game.SimulateMove(startRow, startCol, destRow, 3))
             {
                 return false;
             }
@@ -37,7 +37,7 @@ public class King : Piece
 
             squares[destRow, 2] = this;
             squares[destRow, 3] = rook;
-            if (game.isCheck(IsWhite))
+            if (game.IsCheck(IsWhite))
             {
                 squares[destRow, 2] = null;
                 squares[startRow, startCol] = this;
@@ -51,13 +51,13 @@ public class King : Piece
             return true;
         }
 
-        if (!wasMoved && destCol == 7 &&  destRow == rowForCastling && !game.isCheck(IsWhite)) //allow castling for clicking on rook - short side
+        if (!wasMoved && destCol == 7 &&  destRow == rowForCastling && !game.IsCheck(IsWhite)) //allow castling for clicking on rook - short side
         {
             if (squares[rowForCastling, 5] == null || squares[rowForCastling, 6] == null)
             {
                 return false;
             }
-            if (game.simulateMove(startRow, startCol, destRow, 5) || game.simulateMove(startRow, startCol, destRow, 6))
+            if (game.SimulateMove(startRow, startCol, destRow, 5) || game.SimulateMove(startRow, startCol, destRow, 6))
             {
                 return false;
             }
@@ -71,7 +71,7 @@ public class King : Piece
 
             squares[destRow, 6] = this;
             squares[destRow, 5] = rook;
-            if (game.isCheck(IsWhite))
+            if (game.IsCheck(IsWhite))
             {
                 squares[destRow, 6] = null;
                 squares[startRow, startCol] = this;
