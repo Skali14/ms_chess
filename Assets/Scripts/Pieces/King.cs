@@ -90,6 +90,6 @@ public class King : Piece
             return false;
         }
 
-        return false;
+        return true;
     }
 }
