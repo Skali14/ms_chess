@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Text.RegularExpressions;
 
 public class Pawn : Piece
 {
@@ -47,6 +48,7 @@ public class Pawn : Piece
             if (lastDestRow == startRow && Math.Abs(lastDestCol - startCol) == 1 && destRow == lastDestRow + direction && destCol == lastDestCol)
             {
                 squares[lastDestRow, lastDestCol] = null; // captured Pawn
+                GameObject.FindGameObjectWithTag(lastPiece.Tag).GetComponent<movePieces>().MoveToCapturedArea();
                 game.CapturedPieces.Add(lastPiece);
                 return true; // En passant capture is valid
             }

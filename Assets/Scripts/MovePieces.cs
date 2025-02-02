@@ -66,7 +66,10 @@ public class movePieces : MonoBehaviour
             (int, char) endField = CalculateField(endPos);
             Debug.Log("Initial" + initialField);
             Debug.Log("End" + endField);
-            if (game.MakeMove(initialField.Item1, initialField.Item2, endField.Item1, endField.Item2)) 
+            if(endField.Item2 == 'X')
+            {
+                SnapToNearestCenter(initialPos);
+            } else if (game.MakeMove(initialField.Item1, initialField.Item2, endField.Item1, endField.Item2)) 
             {
                 SnapToNearestCenter(endPos);
             } else
