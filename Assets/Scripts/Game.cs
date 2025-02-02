@@ -16,13 +16,10 @@ public class Game : MonoBehaviour
 
     public List<Piece> CapturedPieces;
 
-    public static Game instance;
-
     public Game()
     {
         Board = new Chessboard();
         IsWhiteTurn = true;
-        instance = this;
     }
 
     public bool MakeMove(int startRowRaw, char startColChar, int destRowRaw, char destColChar)
