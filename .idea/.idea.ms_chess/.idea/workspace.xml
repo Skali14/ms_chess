@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b95ac75e-62a8-4a2e-b245-3e4fa332491b" name="Changes" comment="" />
+    <list default="true" id="b95ac75e-62a8-4a2e-b245-3e4fa332491b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ms_chess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ms_chess/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/EditMode/ChessMoveTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/EditMode/ChessMoveTest.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +33,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/Felix/unity/ms_chess/Assets/Tests/EditMode/BoardEvalTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Felix/unity/ms_chess/Assets/Scripts/Game.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -121,7 +125,9 @@
       <workItem from="1738437621681" duration="217000" />
       <workItem from="1738437848924" duration="1286000" />
       <workItem from="1738439151959" duration="551000" />
-      <workItem from="1738439716746" duration="621000" />
+      <workItem from="1738439716746" duration="933000" />
+      <workItem from="1738509879026" duration="79000" />
+      <workItem from="1738509965706" duration="875000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor and expand BoardEvalTest with additional tests.&#10;&#10;Renamed test class and methods for better clarity and naming conventions. Added tests for all chess pieces to validate their initial positions on both white and black sides. Improved code formatting and debugging messages for consistency.">
       <option name="closed" value="true" />
@@ -139,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738439416197</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add unit tests for ChessMove logic and Rider project settings&#10;&#10;Implemented two test cases for pawn movement validation in ChessMoveTest.">
+      <option name="closed" value="true" />
+      <created>1738440632520</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738440632520</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +171,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Refactor and expand BoardEvalTest with additional tests.&#10;&#10;Renamed test class and methods for better clarity and naming conventions. Added tests for all chess pieces to validate their initial positions on both white and black sides. Improved code formatting and debugging messages for consistency." />
     <MESSAGE value="Rename and enhance chessboard initialization tests.&#10;&#10;The class name was updated to &quot;BoardInitTest&quot; for better clarity. Minor improvements were made, such as using `var` for type inference to improve readability and ensure consistency in code style. Testing flow and functionality remain unchanged." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename and enhance chessboard initialization tests.&#10;&#10;The class name was updated to &quot;BoardInitTest&quot; for better clarity. Minor improvements were made, such as using `var` for type inference to improve readability and ensure consistency in code style. Testing flow and functionality remain unchanged." />
+    <MESSAGE value="Add unit tests for ChessMove logic and Rider project settings&#10;&#10;Implemented two test cases for pawn movement validation in ChessMoveTest." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add unit tests for ChessMove logic and Rider project settings&#10;&#10;Implemented two test cases for pawn movement validation in ChessMoveTest." />
   </component>
 </project>

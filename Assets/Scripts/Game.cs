@@ -34,7 +34,7 @@ public class Game
         {
             if (piece is not King || !(piece as King).justCastled)
             {
-                // Simulate the move to ensure it doesn’t leave the king in check
+                // Simulate the move to ensure it doesnâ€™t leave the king in check
                 if (SimulateMove(startRow, startCol, destRow, destCol))
                 {
                     return false; // Move would result in check, so it's not allowed
