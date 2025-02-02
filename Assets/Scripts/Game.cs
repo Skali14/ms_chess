@@ -20,6 +20,8 @@ public class Game
     {
         Board = new Chessboard();
         IsWhiteTurn = true;
+        //dummy lastmove
+        LastMove = (0, 0, 0, 0, new Rook(true));
     }
 
     public bool MakeMove(int startRowRaw, char startColChar, int destRowRaw, char destColChar)
