@@ -14,7 +14,7 @@ public class Game
 
     public (int StartRow, int StartCol, int DestRow, int DestCol, Piece MovedPiece)? LastMove { get; private set; }
 
-    public static List<Piece> CapturedPieces; 
+    public List<Piece> CapturedPieces; 
 
     public Game()
     {

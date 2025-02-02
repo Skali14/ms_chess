@@ -47,7 +47,6 @@ public class Pawn : Piece
             {
                 squares[lastDestRow, lastDestCol] = null; // captured Pawn
                 game.CapturedPieces.Add(lastPiece);
-
                 return true; // En passant capture is valid
             }
         }
