@@ -17,6 +17,7 @@ public class movePieces : MonoBehaviour
     private void Start()
     {
         game = Game.instance;
+        SnapToNearestCenter(transform.position);
     }
 
     private void Update()
@@ -24,14 +25,18 @@ public class movePieces : MonoBehaviour
         //TODO
         if(dragging && !game.GameEnd)
         {
-            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+            if(game.IsWhiteTurn && tag.StartsWith("w") || !game.IsWhiteTurn && tag.StartsWith("b"))
+            {
+                transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+            }
+            
         }
     }
 
     public void OnMouseDown()
     {
         //TODO
-        if(!game.GameEnd)
+        if(!game.GameEnd && (game.IsWhiteTurn && tag.StartsWith("w") || !game.IsWhiteTurn && tag.StartsWith("b")))
         {
             initialPos = transform.position;
             offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -43,7 +48,7 @@ public class movePieces : MonoBehaviour
     public void OnMouseUp()
     {
         //TODO
-        if(!game.GameEnd)
+        if(!game.GameEnd && (game.IsWhiteTurn && tag.StartsWith("w") || !game.IsWhiteTurn && tag.StartsWith("b")))
         {
             dragging = false;
             endPos = transform.position;

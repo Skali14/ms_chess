@@ -16,7 +16,7 @@ public class Game : MonoBehaviour
 
 
     public static Game instance;
-    public List<Piece> CapturedPieces; 
+    public List<Piece> CapturedPieces;
 
     public Game()
     {
