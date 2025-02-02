@@ -7,7 +7,8 @@ public class Game
     public Chessboard Board { get; private set; }
     public bool IsWhiteTurn { get; private set; }
 
-    public bool StaleMate { get; private set; }
+    public static bool StaleMate;
+    public static bool GameEnd;
 
     public (int StartRow, int StartCol, int DestRow, int DestCol, Piece MovedPiece)? LastMove { get; private set; }
 
@@ -17,16 +18,48 @@ public class Game
         IsWhiteTurn = true;
     }
 
-    public bool makeMove(int startRowRaw, char startColChar, int destRow, char destCol)
+    public bool makeMove(int startRowRaw, char startColChar, int destRowRaw, char destColChar)
     {
-        //TODO
         (int startRow, int startCol) = Board.ConvertChessCoordinates(startRowRaw, startColChar);
+        (int destRow, int destCol) = Board.ConvertChessCoordinates(destRowRaw, destColChar);
+
         Piece piece = Board.Squares[startRow, startCol];
-        if (piece != null && piece.IsValidMove(startRow, startCol, destRow, destCol, Board.Squares, this))
+        if (piece != null && piece.IsWhite == IsWhiteTurn && piece.IsValidMove(startRow, startCol, destRow, destCol, Board.Squares, this))
         {
-            
+            // Simulate the move to ensure it doesn’t leave the king in check
+            if (simulateMove(startRow, startCol, destRow, destCol))
+            {
+                return false; // Move would result in check, so it's not allowed
+            }
+
+            // Move the piece
+            Board.Squares[destRow, destCol] = piece;
+            Board.Squares[startRow, startCol] = null;
+
+            // If the piece is a pawn reaching the last rank, promote it (for simplicity, to a queen)
+            if (piece is Pawn && (destRow == 0 || destRow == 7))
+            {
+                Board.Squares[destRow, destCol] = new Queen(piece.IsWhite);
+            }
+
             LastMove = (startRow, startCol, destRow, destCol, piece);
-            return false;
+
+            // Switch turns
+            IsWhiteTurn = !IsWhiteTurn;
+
+            // Check for checkmate or stalemate
+            if (isCheckMate())
+            {
+                Debug.Log(IsWhiteTurn ? "Black wins by checkmate!" : "White wins by checkmate!");
+                GameEnd = true;
+            }
+            else if (IsStaleMate())
+            {
+                Debug.Log("Stalemate! The game is a draw.");
+                StaleMate = true;
+                GameEnd = true;
+            }
+            return true;
         }
         else
         {
@@ -139,8 +172,40 @@ public class Game
 
     private bool IsStaleMate()
     {
-        return false;
-        //TODO
+        if (isCheck(IsWhiteTurn))
+        {
+            return false; // If the king is in check, it's not stalemate.
+        }
+
+        // Iterate over all pieces of the current player
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                Piece piece = Board.Squares[i, j];
+
+                if (piece != null && piece.IsWhite == IsWhiteTurn) // Current player's piece
+                {
+                    // Try all possible moves for this piece
+                    for (int destRow = 0; destRow < 8; destRow++)
+                    {
+                        for (int destCol = 0; destCol < 8; destCol++)
+                        {
+                            if (piece.IsValidMove(i, j, destRow, destCol, Board.Squares, this))
+                            {
+                                if (!simulateMove(i, j, destRow, destCol))
+                                {
+                                    return false; // Found at least one legal move, not stalemate
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // If no legal move exists and the king is not in check, it's stalemate
+        return true;
     }
 
 
