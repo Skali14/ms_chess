@@ -61,4 +61,9 @@ public class Chessboard
     {
         return row >= 0 && row < 8 && col >= 0 && col < 8;
     }
+
+    public (int,  int) ConvertChessCoordinates(int startRow, char startCol)
+    {
+        return (Math.Abs(startRow - 1 - 7), startCol - 65);
+    }
 }
