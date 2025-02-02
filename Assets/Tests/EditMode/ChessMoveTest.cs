@@ -16,7 +16,7 @@ public class ChessMoveTest
     public void TestSimplePawnOpeningMove()
     {
         // Act: Move the pawn forward to position (2, 'A')
-        var moveResult = _game.makeMove(2, 'E', 4, 'E');
+        var moveResult = _game.MakeMove(2, 'E', 4, 'E');
     
         // Assert: Verify that the pawn has moved successfully and is at the new position
         Assert.IsTrue(moveResult, "The pawn should move one square forward.");
@@ -28,7 +28,7 @@ public class ChessMoveTest
     public void TestSimplePawnOpeningMove_InvalidMove()
     {
         // Act: Move the pawn forward to position (2, 'A')
-        var moveResult = _game.makeMove(2, 'E', 1, 'E');
+        var moveResult = _game.MakeMove(2, 'E', 1, 'E');
     
         // Assert: Verify that the pawn has moved successfully and is at the new position
         Assert.IsFalse(moveResult, "The pawn should move one square forward.");
