@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b95ac75e-62a8-4a2e-b245-3e4fa332491b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/chessBot.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/chessBot/Eval.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/chessBot/Eval.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/EditMode/BotTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/EditMode/BotTest.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ms_chess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ms_chess/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chessboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chessboard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tests/EditMode/ChessMoveTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/EditMode/ChessMoveTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +38,18 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/Felix/unity/ms_chess/Assets/Scripts/Game.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
