@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using UnityEngine;
 
 public class Chessboard
 {
@@ -65,4 +67,34 @@ public class Chessboard
     {
         return (Math.Abs(startRow - 1 - 7), startCol - 65);
     }
+    
+    public void PrintSquares()
+    {
+        for (var row = 0; row < Squares.GetLength(0); row++)
+        {
+            var str =  "";
+            for (var col = 0; col < Squares.GetLength(1); col++)
+            {
+                
+                var piece = Squares[row, col];
+                if (piece == null)
+                {
+                    str += "[   ]";
+                }
+                else
+                {
+                    if (piece.IsWhite)
+                    {
+                        str += $"[{piece.GetType().Name[0]} W]";
+                    }
+                    else
+                    {
+                        str += $"[{piece.GetType().Name[0]} B]";
+                    }
+                }
+            } 
+            Debug.Log(str);
+        }
+    }
+    
 }

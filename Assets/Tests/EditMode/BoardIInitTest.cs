@@ -178,4 +178,10 @@ public class BoardInitTest
             Assert.IsTrue(pawn is Pawn, "Piece at (7, {c}) is not pawn");
         }
     }
+
+    [Test]
+    public void TestPrintConsolBoard()
+    {
+        _chessboard.PrintSquares();
+    }
 }

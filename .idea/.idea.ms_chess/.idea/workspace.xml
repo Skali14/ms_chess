@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b95ac75e-62a8-4a2e-b245-3e4fa332491b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/chessBot.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/chessBot/Eval.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/chessBot/Eval.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tests/EditMode/BotTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tests/EditMode/BotTest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/chessBot/MiniMaxBot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/chessBot/MiniMaxBot.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ms_chess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ms_chess/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chessboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chessboard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/EditMode/ChessMoveTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/EditMode/ChessMoveTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/EditMode/BoardIInitTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/EditMode/BoardIInitTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/EditMode/BotTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/EditMode/BotTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +36,6 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
@@ -144,6 +139,7 @@
       <workItem from="1738439716746" duration="933000" />
       <workItem from="1738509879026" duration="79000" />
       <workItem from="1738509965706" duration="875000" />
+      <workItem from="1738516128573" duration="840000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor and expand BoardEvalTest with additional tests.&#10;&#10;Renamed test class and methods for better clarity and naming conventions. Added tests for all chess pieces to validate their initial positions on both white and black sides. Improved code formatting and debugging messages for consistency.">
       <option name="closed" value="true" />
@@ -169,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738440632520</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Eval class and BotTest for chess point evaluation&#10;&#10;Introduce the `Eval` class to calculate board points for each side, complete with helper methods for piece valuation. Add `BotTest` edit mode tests to validate evaluation functionality for white and black pieces. Update related meta files and clean up unused imports in existing files.">
+      <option name="closed" value="true" />
+      <created>1738513475320</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738513475320</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +192,7 @@
     <MESSAGE value="Refactor and expand BoardEvalTest with additional tests.&#10;&#10;Renamed test class and methods for better clarity and naming conventions. Added tests for all chess pieces to validate their initial positions on both white and black sides. Improved code formatting and debugging messages for consistency." />
     <MESSAGE value="Rename and enhance chessboard initialization tests.&#10;&#10;The class name was updated to &quot;BoardInitTest&quot; for better clarity. Minor improvements were made, such as using `var` for type inference to improve readability and ensure consistency in code style. Testing flow and functionality remain unchanged." />
     <MESSAGE value="Add unit tests for ChessMove logic and Rider project settings&#10;&#10;Implemented two test cases for pawn movement validation in ChessMoveTest." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add unit tests for ChessMove logic and Rider project settings&#10;&#10;Implemented two test cases for pawn movement validation in ChessMoveTest." />
+    <MESSAGE value="Add Eval class and BotTest for chess point evaluation&#10;&#10;Introduce the `Eval` class to calculate board points for each side, complete with helper methods for piece valuation. Add `BotTest` edit mode tests to validate evaluation functionality for white and black pieces. Update related meta files and clean up unused imports in existing files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Eval class and BotTest for chess point evaluation&#10;&#10;Introduce the `Eval` class to calculate board points for each side, complete with helper methods for piece valuation. Add `BotTest` edit mode tests to validate evaluation functionality for white and black pieces. Update related meta files and clean up unused imports in existing files." />
   </component>
 </project>
