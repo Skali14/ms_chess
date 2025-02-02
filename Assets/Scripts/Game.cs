@@ -7,10 +7,10 @@ public class Game : MonoBehaviour
 {
     public Chessboard Board { get; private set; }
 
-    public static bool IsWhiteTurn;
+    public bool IsWhiteTurn;
 
-    public static bool StaleMate;
-    public static bool GameEnd;
+    public bool StaleMate;
+    public bool GameEnd;
 
     public (int StartRow, int StartCol, int DestRow, int DestCol, Piece MovedPiece)? LastMove { get; private set; }
 
@@ -75,8 +75,7 @@ public class Game : MonoBehaviour
 
             LastMove = (startRow, startCol, destRow, destCol, piece);
 
-            // Switch turns
-            IsWhiteTurn = !IsWhiteTurn;
+            
 
             // Check for checkmate or stalemate
             if (IsCheckMate())
@@ -90,6 +89,10 @@ public class Game : MonoBehaviour
                 StaleMate = true;
                 GameEnd = true;
             }
+
+            // Switch turns
+            IsWhiteTurn = !IsWhiteTurn;
+
             return true;
         }
         else
@@ -164,6 +167,7 @@ public class Game : MonoBehaviour
 
         // If no escape, it's checkmate
         return true;
+        
     }
 
     public bool IsCheck(bool isWhite)
