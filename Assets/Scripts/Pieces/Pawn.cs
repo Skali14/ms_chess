@@ -49,7 +49,6 @@ public class Pawn : Piece
             {
                 squares[lastDestRow, lastDestCol] = null; // captured Pawn
                 GameObject.FindGameObjectWithTag(lastPiece.Tag).GetComponent<movePieces>().MoveToCapturedArea();
-                game.CapturedPieces.Add(lastPiece);
                 return true; // En passant capture is valid
             }
         }

@@ -4,8 +4,6 @@ public abstract class Piece
 {
     public bool IsWhite { get; private set; }
 
-    public bool IsCaptured { get;}
-
     public string Tag;
 
     public Piece(bool isWhite, string tag)

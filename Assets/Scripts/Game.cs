@@ -17,12 +17,10 @@ public class Game : MonoBehaviour
 
 
     public static Game instance;
-    public List<Piece> CapturedPieces;
 
     public Game()
     {
         Board = new Chessboard();
-        CapturedPieces = new List<Piece>();
         IsWhiteTurn = true;
         //dummy lastmove
         LastMove = (0, 0, 0, 0, new Rook(true, "dummy"));
@@ -50,7 +48,6 @@ public class Game : MonoBehaviour
                 if (captured != null)
                 {
                     GameObject.FindGameObjectWithTag(captured.Tag).GetComponent<movePieces>().MoveToCapturedArea();
-                    CapturedPieces.Add(captured);
                 }
 
                 // Move the piece
@@ -94,7 +91,7 @@ public class Game : MonoBehaviour
                 StaleMate = true;
                 GameEnd = true;
             }
-
+            
             return true;
         }
         else
