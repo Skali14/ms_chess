@@ -4,11 +4,14 @@ using UnityEngine.UI;
 
 public class GameHandler : MonoBehaviour
 {
-    // Update is called once per frame
     UIManager uiManager;
     Game game;
     public static int result;
     public static int winner;
+    public Sprite white_sprite;
+    public Sprite black_sprite;
+    public SpriteRenderer spriteRenderer;
+    public RectTransform rectTransform;
 
     private void Start()
     {
@@ -19,6 +22,9 @@ public class GameHandler : MonoBehaviour
 
     private void Update()
     {
+        spriteRenderer.sprite = game.IsWhiteTurn ? white_sprite : black_sprite;
+        rectTransform.rotation = game.IsWhiteTurn ? new Quaternion(0, 0, 180, 0) : new Quaternion(0, 0, 0, 0);
+
         if (game.GameEnd)
         {
             doGameOver();

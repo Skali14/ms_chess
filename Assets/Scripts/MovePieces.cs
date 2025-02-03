@@ -24,8 +24,7 @@ public class movePieces : MonoBehaviour
     {
         game = Game.instance;
         SnapToNearestCenter(transform.position);
-        
-        
+
     }
 
     private void Update()
