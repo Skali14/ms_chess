@@ -65,6 +65,7 @@ public class Game : MonoBehaviour
             } else if (piece is King king && king.justCastled)
             {
                 king.justCastled = false;
+                Board.Squares[startRow, startCol] = null;
             }
 
             // If the piece is a pawn reaching the last rank, promote it (for simplicity, to a queen)
