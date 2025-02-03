@@ -824,6 +824,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1349, y: 759}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &226919874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226919876}
+  - component: {fileID: 226919875}
+  m_Layer: 0
+  m_Name: SoundFxManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &226919875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226919874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb7fcf12be4b09243a11ec0b1fb60be0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AudioSource: {fileID: 5692210026793932597, guid: 215e7dc6ce582f14a84389438794f46e, type: 3}
+--- !u!4 &226919876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226919874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &237948485
 GameObject:
   m_ObjectHideFlags: 0
@@ -5648,6 +5693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f93e6bb7724e5724f8a3a6c7f9658c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  capture: {fileID: 8300000, guid: 5130ad6ff56be074b9431e6365ea693f, type: 3}
+  move: {fileID: 8300000, guid: 2870606fee1c6834a9fb5b42f1c3e233, type: 3}
   IsWhiteTurn: 1
   StaleMate: 0
   GameEnd: 0
@@ -7884,3 +7931,4 @@ SceneRoots:
   - {fileID: 217532353}
   - {fileID: 310626478}
   - {fileID: 574276340}
+  - {fileID: 226919876}

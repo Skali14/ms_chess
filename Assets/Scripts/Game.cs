@@ -3,6 +3,7 @@ using UnityEngine;
 public class Game : MonoBehaviour
 {
     [SerializeField] private AudioClip capture;
+    [SerializeField] private AudioClip move;
 
     public Chessboard Board { get; private set; }
 
@@ -45,7 +46,6 @@ public class Game : MonoBehaviour
                 Piece captured = Board.Squares[destRow, destCol];
                 if (captured != null)
                 {
-                    Debug.Log("piece was captured");
                     SoundManager.instance.PlaySound(capture, transform);
                     GameObject.FindGameObjectWithTag(captured.Tag).GetComponent<movePieces>().MoveToCapturedArea();
                 }
@@ -53,6 +53,7 @@ public class Game : MonoBehaviour
                 // Move the piece
                 Board.Squares[destRow, destCol] = piece;
                 Board.Squares[startRow, startCol] = null;
+                SoundManager.instance.PlaySound(move, transform);
 
                 if (piece is Rook rook)
                 {
