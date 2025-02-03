@@ -16,10 +16,8 @@ public class movePieces : MonoBehaviour
     private Vector3 initialPos;
     private Vector3 endPos;
     private Game game;
-    private Piece ThisPiece;
     private bool stillInGame = true;
     private int curSortingOrder;
-
     private bool justCastled;
 
     private void Start()
@@ -230,7 +228,7 @@ public class movePieces : MonoBehaviour
                     switch (tag)
                     {
                         case "br_1": SnapToNearestCenter(new Vector3(-0.6f, 4.13f, 0)); break;
-                        case "bk_1": SnapToNearestCenter(new Vector3(-1.7f, 4.11f, 0)); break;
+                        case "bk_1": SnapToNearestCenter(new Vector3(-1.7f, 4.11f, 0)); justCastled = true; break;
                     }
                 }
                 break;
@@ -239,7 +237,7 @@ public class movePieces : MonoBehaviour
                     switch (tag)
                     {
                         case "wr_1": SnapToNearestCenter(new Vector3(-0.58f, -3.54f, 0)); break;
-                        case "wk_1": SnapToNearestCenter(new Vector3(-1.65f, -3.56f, 0)); break;
+                        case "wk_1": SnapToNearestCenter(new Vector3(-1.65f, -3.56f, 0)); justCastled = true; break;
                     }
                 }
                 break;
@@ -249,7 +247,7 @@ public class movePieces : MonoBehaviour
                     switch (tag)
                     {
                         case "br_2": SnapToNearestCenter(new Vector3(1.6f, 4.11f, 0)); break;
-                        case "bk_1": SnapToNearestCenter(new Vector3(2.7f, 4.13f, 0)); break;
+                        case "bk_1": SnapToNearestCenter(new Vector3(2.7f, 4.13f, 0)); justCastled = true; break;
                     }
                 }
                 break;
@@ -258,11 +256,11 @@ public class movePieces : MonoBehaviour
                     switch (tag)
                     {
                         case "wr_2": SnapToNearestCenter(new Vector3(1.61f, -3.52f, 0)); break;
-                        case "wk_1": SnapToNearestCenter(new Vector3(2.67f, -3.55f, 0)); break;
+                        case "wk_1": SnapToNearestCenter(new Vector3(2.67f, -3.55f, 0)); justCastled = true; break;
                     }
                 }
                 break;
         }
-        justCastled = true;
+        
     }
 }
