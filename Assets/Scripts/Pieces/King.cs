@@ -19,7 +19,7 @@ public class King : Piece
 
         if (!wasMoved && destCol == 0 && destRow == rowForCastling && !game.IsCheck(IsWhite)) //allow castling for clicking on rook - long side
         {
-            if (squares[rowForCastling, 1] == null || squares[rowForCastling, 2] == null || squares[rowForCastling, 3] == null)
+            if (squares[rowForCastling, 1] != null || squares[rowForCastling, 2] != null || squares[rowForCastling, 3] != null)
             {
                 return false;
             }
@@ -53,7 +53,7 @@ public class King : Piece
 
         if (!wasMoved && destCol == 7 &&  destRow == rowForCastling && !game.IsCheck(IsWhite)) //allow castling for clicking on rook - short side
         {
-            if (squares[rowForCastling, 5] == null || squares[rowForCastling, 6] == null)
+            if (squares[rowForCastling, 5] != null || squares[rowForCastling, 6] != null)
             {
                 return false;
             }
