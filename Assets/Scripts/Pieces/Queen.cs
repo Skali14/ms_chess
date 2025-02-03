@@ -1,9 +1,8 @@
-using UnityEngine;
 using System;
 
 public class Queen : Piece
 {
-    public Queen(bool isWhite) : base(isWhite)
+    public Queen(bool isWhite, string tag) : base(isWhite, tag)
     {
     }
 

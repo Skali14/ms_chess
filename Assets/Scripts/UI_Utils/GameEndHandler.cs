@@ -5,11 +5,10 @@ using TMPro;
 public class GameEndHandler : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    //CHECKMATE = 0, RESIGNATION = 1, DRAW = 2
+    //CHECKMATE = 0, RESIGNATION = 1, STALEMATE = 2
 
     //BLACK = 0, WHITE = 1, NONE = 2
 
-    //self explanatory
     UIManager uiManager;
     void Start()
     {
@@ -43,7 +42,7 @@ public class GameEndHandler : MonoBehaviour
                 TMP_Result.text = "RESIGNATION";
                 break;
              case 2:
-                TMP_Result.text = "DRAW";
+                TMP_Result.text = "STALEMATE";
                 break;
         }
 
@@ -59,6 +58,12 @@ public class GameEndHandler : MonoBehaviour
                 Black_Image.enabled = false;
                 White_Image.enabled = true;
                 break;
+            case 2:
+                TMP_ColorWon.text = "NO ONE won!";
+                Black_Image.enabled = false;
+                White_Image.enabled = false;
+                break;
+
         }
     }
 

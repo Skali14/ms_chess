@@ -2,8 +2,40 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - bp_1
+  - bp_2
+  - bp_3
+  - bp_4
+  - bp_5
+  - bp_6
+  - bp_7
+  - bp_8
+  - br_1
+  - br_2
+  - bn_1
+  - bn_2
+  - bb_1
+  - bb_2
+  - bq_1
+  - bk_1
+  - wp_1
+  - wp_2
+  - wp_3
+  - wp_4
+  - wp_5
+  - wp_6
+  - wp_7
+  - wp_8
+  - wr_1
+  - wr_2
+  - wn_1
+  - wn_2
+  - wb_1
+  - wb_2
+  - wq_1
+  - wk_1
   layers:
   - Default
   - TransparentFX
@@ -41,3 +73,5 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  m_RenderingLayers:
+  - Default

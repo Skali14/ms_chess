@@ -7,7 +7,7 @@ public class King : Piece
 
     public bool justCastled = false;
 
-    public King(bool isWhite) : base(isWhite)
+    public King(bool isWhite, string tag) : base(isWhite, tag)
     {
     }
 
@@ -19,7 +19,7 @@ public class King : Piece
 
         if (!wasMoved && destCol == 0 && destRow == rowForCastling && !game.IsCheck(IsWhite)) //allow castling for clicking on rook - long side
         {
-            if (squares[rowForCastling, 1] == null || squares[rowForCastling, 2] == null || squares[rowForCastling, 3] == null)
+            if (squares[rowForCastling, 1] != null || squares[rowForCastling, 2] != null || squares[rowForCastling, 3] != null)
             {
                 return false;
             }
@@ -45,15 +45,17 @@ public class King : Piece
                 squares[destRow, destCol] = rook;
                 return false;
             }
-
             justCastled = true;
             wasMoved = true;
+
+            GameObject.FindGameObjectWithTag(this.Tag).GetComponent<movePieces>().Castle("queenside_" + (IsWhite ? "w" : "b"));
+            GameObject.FindGameObjectWithTag(rook.Tag).GetComponent<movePieces>().Castle("queenside_" + (IsWhite ? "w" : "b"));
             return true;
         }
 
         if (!wasMoved && destCol == 7 &&  destRow == rowForCastling && !game.IsCheck(IsWhite)) //allow castling for clicking on rook - short side
         {
-            if (squares[rowForCastling, 5] == null || squares[rowForCastling, 6] == null)
+            if (squares[rowForCastling, 5] != null || squares[rowForCastling, 6] != null)
             {
                 return false;
             }
@@ -82,7 +84,17 @@ public class King : Piece
 
             justCastled = true;
             wasMoved = true;
+
+            GameObject.FindGameObjectWithTag(this.Tag).GetComponent<movePieces>().Castle("kingside_" + (IsWhite ? "w" : "b"));
+            GameObject.FindGameObjectWithTag(rook.Tag).GetComponent<movePieces>().Castle("kingside_" + (IsWhite ? "w" : "b"));
             return true;
+        }
+
+        // Check if destination is occupied by a piece of the same color
+        Piece destPiece = squares[destRow, destCol];
+        if (destPiece != null && destPiece.IsWhite == IsWhite)
+        {
+            return false;
         }
 
         if (Math.Abs(startRow - destRow) > 1 || Math.Abs(startCol - destCol) > 1)
@@ -90,6 +102,6 @@ public class King : Piece
             return false;
         }
 
-        return false;
+        return true;
     }
 }

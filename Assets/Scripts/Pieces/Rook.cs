@@ -1,11 +1,9 @@
-using System;
-using UnityEngine;
 
 public class Rook : Piece
 {
     public bool wasMoved = false; // needed for castling checks
 
-    public Rook(bool isWhite) : base(isWhite)
+    public Rook(bool isWhite, string tag) : base(isWhite, tag)
     {
     }
 

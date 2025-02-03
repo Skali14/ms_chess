@@ -1,27 +1,26 @@
-using System.Collections.Generic;
-using System.ComponentModel;
-using Codice.CM.Client.Differences;
 using UnityEngine;
 
-public class Game
+public class Game : MonoBehaviour
 {
     public Chessboard Board { get; private set; }
 
-    public static bool IsWhiteTurn;
+    public bool IsWhiteTurn;
 
-    public static bool StaleMate;
-    public static bool GameEnd;
+    public bool StaleMate;
+    public bool GameEnd;
 
     public (int StartRow, int StartCol, int DestRow, int DestCol, Piece MovedPiece)? LastMove { get; private set; }
 
-    public List<Piece> CapturedPieces; 
+
+    public static Game instance;
 
     public Game()
     {
         Board = new Chessboard();
         IsWhiteTurn = true;
         //dummy lastmove
-        LastMove = (0, 0, 0, 0, new Rook(true));
+        LastMove = (0, 0, 0, 0, new Rook(true, "dummy"));
+        instance = this;
     }
 
     public bool MakeMove(int startRowRaw, char startColChar, int destRowRaw, char destColChar)
@@ -44,7 +43,7 @@ public class Game
                 Piece captured = Board.Squares[destRow, destCol];
                 if (captured != null)
                 {
-                    CapturedPieces.Add(captured);
+                    GameObject.FindGameObjectWithTag(captured.Tag).GetComponent<movePieces>().MoveToCapturedArea();
                 }
 
                 // Move the piece
@@ -62,12 +61,14 @@ public class Game
             } else if (piece is King king && king.justCastled)
             {
                 king.justCastled = false;
+                Board.Squares[startRow, startCol] = null;
             }
 
             // If the piece is a pawn reaching the last rank, promote it (for simplicity, to a queen)
             if (piece is Pawn && (destRow == 0 || destRow == 7))
             {
-                Board.Squares[destRow, destCol] = new Queen(piece.IsWhite);
+                GameObject.FindGameObjectWithTag(Board.Squares[destRow, destCol].Tag).GetComponent<movePieces>().PromoteToQueen();
+                Board.Squares[destRow, destCol] = new Queen(piece.IsWhite, Board.Squares[destRow, destCol].Tag /*TODO*/);
             }
 
             LastMove = (startRow, startCol, destRow, destCol, piece);
@@ -87,6 +88,7 @@ public class Game
                 StaleMate = true;
                 GameEnd = true;
             }
+            
             return true;
         }
         else
@@ -161,6 +163,7 @@ public class Game
 
         // If no escape, it's checkmate
         return true;
+        
     }
 
     public bool IsCheck(bool isWhite)

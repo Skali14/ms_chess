@@ -1,9 +1,8 @@
-using UnityEngine;
 using System;
 
 public class Bishop : Piece
 {
-    public Bishop(bool isWhite) : base(isWhite)
+    public Bishop(bool isWhite, string tag) : base(isWhite, tag)
     {
     }
 

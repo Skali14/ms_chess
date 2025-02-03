@@ -1,9 +1,8 @@
-using UnityEngine;
 using System;
 
 public class Knight : Piece
 {
-    public Knight(bool isWhite) : base(isWhite)
+    public Knight(bool isWhite, string tag) : base(isWhite, tag)
     {
     }
 
