@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
+    [SerializeField] private AudioClip capture;
+
     public Chessboard Board { get; private set; }
 
     public bool IsWhiteTurn;
@@ -43,6 +45,8 @@ public class Game : MonoBehaviour
                 Piece captured = Board.Squares[destRow, destCol];
                 if (captured != null)
                 {
+                    Debug.Log("piece was captured");
+                    SoundManager.instance.PlaySound(capture, transform);
                     GameObject.FindGameObjectWithTag(captured.Tag).GetComponent<movePieces>().MoveToCapturedArea();
                 }
 
