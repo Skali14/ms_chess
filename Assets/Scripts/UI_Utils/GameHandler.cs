@@ -48,11 +48,8 @@ public class GameHandler : MonoBehaviour
         Coroutine fading = StartCoroutine(FadeInBlackOut());
         GetComponent<Button>().interactable = false;
 
-        //Game.gameEnd = true;
         result = 1;
 
-        //TODO get whose turn it is from Game script
-        //winner = Game.turn;
         if(game.IsWhiteTurn)
         {
             winner = 0;
@@ -71,7 +68,6 @@ public class GameHandler : MonoBehaviour
         this.enabled = false;
         Coroutine fading = StartCoroutine(FadeInBlackOut());
         GetComponent<Button>().interactable = false;
-        //TODO query gameEnd and draw from Game.cs and update result accordingly
         if (game.GameEnd == true && game.StaleMate == true) 
         {
             result = 2;
@@ -81,7 +77,6 @@ public class GameHandler : MonoBehaviour
             result = 0;
         }
 
-        //TODO query turn variable from Game.cs to get whose turn it was
         if(game.StaleMate == false)
         {
             if (game.IsWhiteTurn)

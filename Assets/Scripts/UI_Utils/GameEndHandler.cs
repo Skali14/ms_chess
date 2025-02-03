@@ -9,7 +9,6 @@ public class GameEndHandler : MonoBehaviour
 
     //BLACK = 0, WHITE = 1, NONE = 2
 
-    //self explanatory
     UIManager uiManager;
     void Start()
     {

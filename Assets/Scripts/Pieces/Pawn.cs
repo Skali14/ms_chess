@@ -1,6 +1,5 @@
 using UnityEngine;
 using System;
-using System.Text.RegularExpressions;
 
 public class Pawn : Piece
 {
