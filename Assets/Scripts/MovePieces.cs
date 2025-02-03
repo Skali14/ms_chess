@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UIElements;
 
 public class movePieces : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class movePieces : MonoBehaviour
     private Game game;
     private Piece ThisPiece;
     private bool stillInGame = true;
+    private int curSortingOrder;
+
+    private bool justCastled;
 
     private void Start()
     {
@@ -48,6 +52,8 @@ public class movePieces : MonoBehaviour
         //TODO
         if(stillInGame && !game.GameEnd && (game.IsWhiteTurn && tag.StartsWith("w") || !game.IsWhiteTurn && tag.StartsWith("b")))
         {
+            curSortingOrder = GetComponent<SpriteRenderer>().sortingOrder;
+            GetComponent<SpriteRenderer>().sortingOrder = 100;
             initialPos = transform.position;
             offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             dragging = true;
@@ -60,17 +66,21 @@ public class movePieces : MonoBehaviour
         //TODO
         if(stillInGame && !game.GameEnd && (game.IsWhiteTurn && tag.StartsWith("w") || !game.IsWhiteTurn && tag.StartsWith("b")))
         {
+            GetComponent<SpriteRenderer>().sortingOrder = curSortingOrder;
             dragging = false;
             endPos = transform.position;
             (int, char) initialField = CalculateField(initialPos);
             (int, char) endField = CalculateField(endPos);
-            Debug.Log("Initial" + initialField);
-            Debug.Log("End" + endField);
-            if(endField.Item2 == 'X')
+            if(endField.Item2 == 'X' || endField.Item1 > 8 || endField.Item1 < 1)
             {
                 SnapToNearestCenter(initialPos);
             } else if (game.MakeMove(initialField.Item1, initialField.Item2, endField.Item1, endField.Item2)) 
             {
+                if(justCastled)
+                {
+                    justCastled = false;
+                    return;
+                }
                 SnapToNearestCenter(endPos);
             } else
             {
@@ -143,6 +153,22 @@ public class movePieces : MonoBehaviour
         }
     }
 
+    private int ConvertCharToInt(char value) 
+    {
+        switch (value)
+        {
+            case 'A': return 1;
+            case 'B': return 2;
+            case 'C': return 3;
+            case 'D': return 4;
+            case 'E': return 5;
+            case 'F': return 6;
+            case 'G': return 7;
+            case 'H': return 8;
+            default: return 100;
+        }
+    }
+
     public void MoveToCapturedArea()
     {
         stillInGame = false;
@@ -193,5 +219,50 @@ public class movePieces : MonoBehaviour
     public void PromoteToQueen()
     {
         GetComponent<SpriteRenderer>().sprite = queenSprite;
+    }
+
+    public void Castle(string type)
+    {
+        switch(type)
+        {
+            case "queenside_b":
+                {
+                    switch (tag)
+                    {
+                        case "br_1": SnapToNearestCenter(new Vector3(-0.6f, 4.13f, 0)); break;
+                        case "bk_1": SnapToNearestCenter(new Vector3(-1.7f, 4.11f, 0)); break;
+                    }
+                }
+                break;
+            case "queenside_w":
+                {
+                    switch (tag)
+                    {
+                        case "wr_1": SnapToNearestCenter(new Vector3(-0.58f, -3.54f, 0)); break;
+                        case "wk_1": SnapToNearestCenter(new Vector3(-1.65f, -3.56f, 0)); break;
+                    }
+                }
+                break;
+            case "kingside_b":
+                {
+                    
+                    switch (tag)
+                    {
+                        case "br_2": SnapToNearestCenter(new Vector3(1.6f, 4.11f, 0)); break;
+                        case "bk_1": SnapToNearestCenter(new Vector3(2.7f, 4.13f, 0)); break;
+                    }
+                }
+                break;
+            case "kingside_w":
+                {
+                    switch (tag)
+                    {
+                        case "wr_2": SnapToNearestCenter(new Vector3(1.61f, -3.52f, 0)); break;
+                        case "wk_1": SnapToNearestCenter(new Vector3(2.67f, -3.55f, 0)); break;
+                    }
+                }
+                break;
+        }
+        justCastled = true;
     }
 }

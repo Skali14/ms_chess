@@ -45,9 +45,11 @@ public class King : Piece
                 squares[destRow, destCol] = rook;
                 return false;
             }
-
             justCastled = true;
             wasMoved = true;
+
+            GameObject.FindGameObjectWithTag(this.Tag).GetComponent<movePieces>().Castle("queenside_" + (IsWhite ? "w" : "b"));
+            GameObject.FindGameObjectWithTag(rook.Tag).GetComponent<movePieces>().Castle("queenside_" + (IsWhite ? "w" : "b"));
             return true;
         }
 
@@ -82,6 +84,9 @@ public class King : Piece
 
             justCastled = true;
             wasMoved = true;
+
+            GameObject.FindGameObjectWithTag(this.Tag).GetComponent<movePieces>().Castle("kingside_" + (IsWhite ? "w" : "b"));
+            GameObject.FindGameObjectWithTag(rook.Tag).GetComponent<movePieces>().Castle("kingside_" + (IsWhite ? "w" : "b"));
             return true;
         }
 
