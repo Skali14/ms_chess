@@ -107,8 +107,6 @@ public class Game : MonoBehaviour
             return false;
         }
 
-        Debug.Log("Here before Kings options");
-
         //find kings position
         (int kingRow, int kingCol) = FindKingPos(IsWhiteTurn);
 
@@ -140,8 +138,6 @@ public class Game : MonoBehaviour
             }
         }
 
-        Debug.Log("Here after Kings options");
-
         //Check if any piece can block the check or capture the attacker
         for (int i = 0; i < 8; i++)
         {
@@ -159,7 +155,6 @@ public class Game : MonoBehaviour
                             {
                                 if (!SimulateMove(i, j, destRow, destCol))
                                 {
-                                    Debug.Log($"Valid move: i={i}, j={j}, destRow={destRow}, destCol={destCol}");
                                     return false;
                                 }
                             }
@@ -168,7 +163,6 @@ public class Game : MonoBehaviour
                 }
             }
         }
-        Debug.Log("No escape");
 
         // If no escape, it's checkmate
         return true;
