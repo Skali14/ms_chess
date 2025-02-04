@@ -53,7 +53,6 @@ public class Game : MonoBehaviour
                 // Move the piece
                 Board.Squares[destRow, destCol] = piece;
                 Board.Squares[startRow, startCol] = null;
-                SoundManager.instance.PlaySound(move, transform);
 
                 if (piece is Rook rook)
                 {
@@ -69,11 +68,13 @@ public class Game : MonoBehaviour
                 Board.Squares[startRow, startCol] = null;
             }
 
+            SoundManager.instance.PlaySound(move, transform);
+
             // If the piece is a pawn reaching the last rank, promote it (for simplicity, to a queen)
             if (piece is Pawn && (destRow == 0 || destRow == 7))
             {
                 GameObject.FindGameObjectWithTag(Board.Squares[destRow, destCol].Tag).GetComponent<movePieces>().PromoteToQueen();
-                Board.Squares[destRow, destCol] = new Queen(piece.IsWhite, Board.Squares[destRow, destCol].Tag /*TODO*/);
+                Board.Squares[destRow, destCol] = new Queen(piece.IsWhite, Board.Squares[destRow, destCol].Tag);
             }
 
             LastMove = (startRow, startCol, destRow, destCol, piece);
